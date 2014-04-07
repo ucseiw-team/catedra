@@ -4,7 +4,7 @@ from django.shortcuts import render
 from sitio.models import Noticia
 
 
-def ejemplo_clase_1(request):
+def inicio(request):
     '''Este es un ejemplo bastante básico de una vista con datos sacados de
     la base de datos.'''
 
@@ -16,9 +16,15 @@ def ejemplo_clase_1(request):
 
     noticias = Noticia.objects.all()
 
-    return render(request, 'ejemplo_clase_1.html', {'lista_noticias': noticias})
+    return render(request, 'inicio.html', {'lista_noticias': noticias})
 
 
-def ejemplo_clase_2(request):
+def contador(request):
     '''Este es un ejemplo básico de html con css y javascript.'''
-    return render(request, 'ejemplo_clase_2.html', {})
+    return render(request, 'contador.html', {})
+
+
+def vacia(request):
+    '''Este es un ejemplo con template que no define bloques.'''
+    return render(request, 'vacia.html', {})
+

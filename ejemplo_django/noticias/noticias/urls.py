@@ -8,8 +8,9 @@ urlpatterns = patterns('',
     # url(r'^$', 'noticias.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^ejemplo_clase_1/$', 'sitio.views.ejemplo_clase_1', name='ejemplo_clase_1'),
-    url(r'^ejemplo_clase_2/$', 'sitio.views.ejemplo_clase_2', name='ejemplo_clase_2'),
+    url(r'^inicio/$', 'sitio.views.inicio', name='inicio'),
+    url(r'^contador/$', 'sitio.views.contador', name='contador'),
+    url(r'^vacia/$', 'sitio.views.vacia', name='vacia'),
 
     url(r'^admin/', include(admin.site.urls)),
 )
