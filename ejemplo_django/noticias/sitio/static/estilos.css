@@ -1,0 +1,20 @@
+h1, p {
+    font-family: Verdana;
+}
+
+h1#el_titulo {
+    color: #FF0000;
+}
+
+p.pes {
+    color: #00FF00;
+}
+
+div#pie_pagina {
+    position: absolute;
+    bottom: 0px;
+}
+
+div#pie_pagina p {
+    color: #0000FF;
+}
