@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.Net.Http.es</id>
+    <version>2.0.20710.0</version>
+    <title>Recursos en español para las Microsoft .NET Framework 4 HTTP Client Libraries</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/MVC_4_ESN.htm</licenseUrl>
+    <projectUrl>http://www.asp.net/web-api</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Este paquete contiene los ensamblados satélites en español para las Microsoft .NET Framework 4 HTTP Client Libraries.</description>
+    <summary>Recursos en español para el paquete Microsoft.Net.Http</summary>
+    <language>es</language>
+    <dependencies>
+      <dependency id="Microsoft.Net.Http" version="[2.0.20710.0]" />
+    </dependencies>
+    <references />
+  </metadata>
+</package>

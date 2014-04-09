@@ -1,0 +1,47 @@
+@model IEnumerable<Comunidad.Models.User>
+
+@{
+    ViewBag.Title = "Listado de usuarios";
+}
+
+<h2>Listado</h2>
+
+<p>
+    @Html.ActionLink("Crear nuevo", "Create")
+</p>
+<table>
+    <tr>
+        <th></th>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Correo electrónico
+        </th>
+        <th>
+            Password
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.Id })
+        </td>
+        <td>
+			@item.Name
+        </td>
+        <td>
+			@item.Email
+        </td>
+        <td>
+			@item.Password
+        </td>
+    </tr>
+}
+
+</table>
+
+

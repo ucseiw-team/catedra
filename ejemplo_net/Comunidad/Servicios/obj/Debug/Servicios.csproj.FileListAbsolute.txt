@@ -1,0 +1,16 @@
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Servicios\bin\Debug\Servicios.dll.config
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Servicios\bin\Debug\Servicios.dll
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Servicios\bin\Debug\Servicios.pdb
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Servicios\bin\Debug\Datos.dll
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Servicios\bin\Debug\EntityFramework.dll
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Servicios\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Servicios\bin\Debug\RepositorioClases.dll
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Servicios\bin\Debug\Datos.pdb
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Servicios\bin\Debug\RepositorioClases.pdb
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Servicios\bin\Debug\EntityFramework.xml
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Servicios\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Servicios\obj\Debug\Servicios.csprojResolveAssemblyReference.cache
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Servicios\obj\Debug\Servicios.dll
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Servicios\obj\Debug\Servicios.pdb
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Servicios\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Servicios\bin\Debug\es\EntityFramework.SqlServer.resources.dll

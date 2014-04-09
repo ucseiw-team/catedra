@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>MvcScaffolding</id>
+    <version>1.0.9</version>
+    <authors>Scott Hanselman,  Steve Sanderson</authors>
+    <owners>Scott Hanselman,  Steve Sanderson</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A fast and customizable way to add controllers, views, and other items to your ASP.NET MVC application</description>
+    <summary>A fast and customizable way to add controllers, views, and other items to your ASP.NET MVC application</summary>
+    <dependencies>
+      <dependency id="T4Scaffolding" />
+    </dependencies>
+    <references />
+  </metadata>
+</package>

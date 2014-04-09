@@ -1,0 +1,5 @@
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\RepositorioClases\bin\Debug\RepositorioClases.dll
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\RepositorioClases\bin\Debug\RepositorioClases.pdb
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\RepositorioClases\obj\Debug\RepositorioClases.csprojResolveAssemblyReference.cache
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\RepositorioClases\obj\Debug\RepositorioClases.dll
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\RepositorioClases\obj\Debug\RepositorioClases.pdb
