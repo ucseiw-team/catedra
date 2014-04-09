@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.AspNet.WebPages.es</id>
+    <version>2.0.20710.0</version>
+    <title>Recursos en español para Microsoft ASP.NET Web Pages 2</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/WebPages_2_eula_ESN.htm</licenseUrl>
+    <projectUrl>http://www.asp.net/web-pages</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Este paquete contiene los ensamblados satélites en español para ASP.NET Web Pages 2.</description>
+    <summary>Recursos en español para el paquete Microsoft.AspNet.WebPages</summary>
+    <language>es</language>
+    <tags>Microsoft AspNet WebPages AspNetWebPages</tags>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.WebPages" version="[2.0.20710.0]" />
+    </dependencies>
+    <references />
+  </metadata>
+</package>

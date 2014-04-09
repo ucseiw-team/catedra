@@ -1,0 +1,29 @@
+@model Comunidad.Models.User
+
+@{
+    ViewBag.Title = "Eliminar usuario";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Desea confirmar la eliminación del usuario?</h3>
+<fieldset>
+    <legend>Usuario</legend>
+
+    <div class="display-label">Nombre</div>
+    <div class="display-field">@Model.Name</div>
+
+    <div class="display-label">Correo electrónico</div>
+    <div class="display-field">@Model.Email</div>
+
+    <div class="display-label">Password</div>
+    <div class="display-field">@Model.Password</div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Eliminar" /> |
+        @Html.ActionLink("Volver al listado", "Index")
+    </p>
+}
+
+

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WebTaxiModelsWebTaxiContextModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="Journeys">
+      <EntityTypeMapping TypeName="WebTaxi.Models.WebTaxiContextModel.Journeys">
+        <MappingFragment StoreEntitySet="Journeys">
+          <ScalarProperty Name="JourneyId" ColumnName="JourneyId" />
+          <ScalarProperty Name="Key" ColumnName="Key" />
+          <ScalarProperty Name="URI" ColumnName="URI" />
+          <ScalarProperty Name="LifeTime" ColumnName="LifeTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="WebTaxi.Models.WebTaxiContextModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+          <ScalarProperty Name="SecretQuestion" ColumnName="SecretQuestion" />
+          <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.AspNet.WebApi.Client.es</id>
+    <version>4.0.20710.0</version>
+    <title>Recursos en español para Microsoft ASP.NET Web API Client Libraries</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/MVC_4_eula_ESN.htm</licenseUrl>
+    <projectUrl>http://www.asp.net/web-api</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Este paquete contiene los ensamblados satélites en español para las ASP.NET Web API Client Libraries.</description>
+    <summary>Recursos en español para el paquete Microsoft.AspNet.WebApi.Client</summary>
+    <language>es</language>
+    <tags>Microsoft AspNet WebApi AspNetWebApi HttpClient</tags>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.WebApi.Client" version="[4.0.20710.0]" />
+    </dependencies>
+    <references />
+  </metadata>
+</package>

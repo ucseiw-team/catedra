@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>EntityFramework.es</id>
+    <version>6.1.0</version>
+    <title>Recursos de español para Entity Framework</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://go.microsoft.com/fwlink/?LinkId=320539&amp;clcid=0x40a</licenseUrl>
+    <projectUrl>http://go.microsoft.com/fwlink/?LinkId=320540&amp;clcid=0x40a</projectUrl>
+    <iconUrl>http://go.microsoft.com/fwlink/?LinkID=386613&amp;clcid=0x40a</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Este paquete contiene los emsamblados satélite de español para Entity Framework</description>
+    <summary>Recursos de español para el paquete de Entity Framework</summary>
+    <language>es</language>
+    <dependencies>
+      <dependency id="EntityFramework" version="[6.1.0]" />
+    </dependencies>
+    <references />
+  </metadata>
+</package>

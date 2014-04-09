@@ -1,0 +1,1151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>EntityFramework.SqlServer</name>
+  </assembly>
+  <members>
+    <member name="T:System.Data.Entity.SqlServer.SqlAzureExecutionStrategy">
+      <summary>
+        <see cref="T:System.Data.Entity.Infrastructure.IDbExecutionStrategy" /> que recupera acciones que inician excepciones provocadas por errores transitorios de SQL Azure. </summary>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlAzureExecutionStrategy.#ctor">
+      <summary>Crea una nueva instancia de <see cref="T:System.Data.Entity.SqlServer.SqlAzureExecutionStrategy" />.</summary>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlAzureExecutionStrategy.#ctor(System.Int32,System.TimeSpan)">
+      <summary>Crea una nueva instancia de <see cref="T:System.Data.Entity.SqlServer.SqlAzureExecutionStrategy" /> con los límites especificados para el número de reintentos y el retraso entre reintentos.</summary>
+      <param name="maxRetryCount">Número máximo de reintentos.</param>
+      <param name="maxDelay">Retraso máximo en milisegundos entre los reintentos.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlAzureExecutionStrategy.ShouldRetryOn(System.Exception)">
+      <summary>Determina si la excepción especificada debe o no reintentarse.</summary>
+      <returns>Es true si la excepción especificada se reintenta; de lo contrario, false.</returns>
+      <param name="exception">Excepción que va a reintentarse.</param>
+    </member>
+    <member name="T:System.Data.Entity.SqlServer.SqlFunctions">
+      <summary>Contiene códigos auxiliares de funciones que exponen métodos de SQL Server en consultas Linq to Entities.</summary>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Acos(System.Nullable{System.Decimal})">
+      <summary>Función matemática que devuelve el ángulo, en radianes, cuyo coseno es el valor numérico especificado.Este ángulo se llama arco coseno.</summary>
+      <returns>Ángulo, medido en radianes.</returns>
+      <param name="arg1">Coseno de un ángulo.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Acos(System.Nullable{System.Double})">
+      <summary>Función matemática que devuelve el ángulo, en radianes, cuyo coseno es el valor numérico especificado.Este ángulo se llama arco coseno.</summary>
+      <returns>Ángulo, en radianes, definido por el valor de coseno de entrada.</returns>
+      <param name="arg1">Coseno de un ángulo.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Ascii(System.String)">
+      <summary>Devuelve el valor de código ASCII del carácter situado más a la izquierda de una expresión de caracteres.</summary>
+      <returns>Código ASCII del primer carácter de la cadena de entrada.</returns>
+      <param name="arg">Cadena válida.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Asin(System.Nullable{System.Decimal})">
+      <summary>Función matemática que devuelve el ángulo, en radianes, cuyo seno es el valor numérico especificado.Este ángulo se llama arco seno.</summary>
+      <returns>Ángulo, medido en radianes.</returns>
+      <param name="arg">Seno de un ángulo.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Asin(System.Nullable{System.Double})">
+      <summary>Función matemática que devuelve el ángulo, en radianes, cuyo seno es el valor numérico especificado.Este ángulo se llama arco seno.</summary>
+      <returns>Ángulo, medido en radianes.</returns>
+      <param name="arg">Seno de un ángulo.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Atan(System.Nullable{System.Decimal})">
+      <summary>Función matemática que devuelve el ángulo, en radianes, cuya tangente es el valor numérico especificado.Este ángulo se llama arco tangente.</summary>
+      <returns>Ángulo, medido en radianes.</returns>
+      <param name="arg">Tangente de un ángulo.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Atan(System.Nullable{System.Double})">
+      <summary>Función matemática que devuelve el ángulo, en radianes, cuya tangente es el valor numérico especificado.Este ángulo se llama arco tangente.</summary>
+      <returns>Ángulo, medido en radianes.</returns>
+      <param name="arg">Tangente de un ángulo.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Atan2(System.Nullable{System.Decimal},System.Nullable{System.Decimal})">
+      <summary>Devuelve el ángulo positivo, en radianes, entre el eje x positivo y el radio, desde el origen hasta el punto (x, y), donde x e y son los dos valores numéricos especificados.El primer parámetro que se pasa a la función es el valor y el segundo parámetro es el valor x.</summary>
+      <returns>Ángulo, medido en radianes.</returns>
+      <param name="arg1">Coordenada y de un punto.</param>
+      <param name="arg2">Coordenada x de un punto.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Atan2(System.Nullable{System.Double},System.Nullable{System.Double})">
+      <summary>Devuelve el ángulo positivo, en radianes, entre el eje x positivo y el radio, desde el origen hasta el punto (x, y), donde x e y son los dos valores numéricos especificados.El primer parámetro que se pasa a la función es el valor y el segundo parámetro es el valor x.</summary>
+      <returns>Ángulo, medido en radianes.</returns>
+      <param name="arg1">Coordenada y de un punto.</param>
+      <param name="arg2">Coordenada x de un punto.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Char(System.Nullable{System.Int32})">
+      <summary>Devuelve el carácter que corresponde al valor ASCII entero especificado.</summary>
+      <returns>Carácter que corresponde al valor ASCII entero especificado.</returns>
+      <param name="arg">Código ASCII.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.CharIndex(System.Byte[],System.Byte[])">
+      <summary>Devuelve la posición inicial de una expresión encontrada dentro de otra expresión.</summary>
+      <returns>Posición inicial de destino si este se encuentra en toSearch.</returns>
+      <param name="toSearch">Expresión de cadena que se va a buscar.</param>
+      <param name="target">Expresión de cadena que se va a buscar.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.CharIndex(System.Byte[],System.Byte[],System.Nullable{System.Int32})">
+      <summary>Devuelve la posición inicial de una expresión encontrada dentro de otra expresión.</summary>
+      <returns>Posición inicial de destino si este se encuentra en toSearch.</returns>
+      <param name="toSearch">Expresión de cadena que se va a buscar.</param>
+      <param name="target">Expresión de cadena que se va a buscar.</param>
+      <param name="startLocation">Posición del carácter en toSearch donde comienza la búsqueda.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.CharIndex(System.Byte[],System.Byte[],System.Nullable{System.Int64})">
+      <summary>Devuelve la posición inicial de una expresión encontrada dentro de otra expresión.</summary>
+      <returns>Posición inicial de destino si este se encuentra en toSearch.</returns>
+      <param name="toSearch">Expresión de cadena que se va a buscar.</param>
+      <param name="target">Expresión de cadena que se va a buscar.</param>
+      <param name="startLocation">Posición del carácter en toSearch donde comienza la búsqueda.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.CharIndex(System.String,System.String)">
+      <summary>Devuelve la posición inicial de una expresión encontrada dentro de otra expresión.</summary>
+      <returns>Posición inicial de destino si este se encuentra en toSearch.</returns>
+      <param name="toSearch">Expresión de cadena que se va a buscar.</param>
+      <param name="target">Expresión de cadena que se va a buscar.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.CharIndex(System.String,System.String,System.Nullable{System.Int32})">
+      <summary>Devuelve la posición inicial de una expresión encontrada dentro de otra expresión.</summary>
+      <returns>Posición inicial de destino si este se encuentra en toSearch.</returns>
+      <param name="toSearch">Expresión de cadena que se va a buscar.</param>
+      <param name="target">Expresión de cadena que se va a buscar.</param>
+      <param name="startLocation">Posición del carácter en toSearch donde comienza la búsqueda.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.CharIndex(System.String,System.String,System.Nullable{System.Int64})">
+      <summary>Devuelve la posición inicial de una expresión encontrada dentro de otra expresión.</summary>
+      <returns>
+        <see cref="T:System.Nullable`1" /> del valor <see cref="T:System.Int64" /> que es la posición inicial de destino si este se encuentra en toSearch.</returns>
+      <param name="toSearch">Expresión de cadena que se va a buscar.</param>
+      <param name="target">Expresión de cadena que se va a buscar.</param>
+      <param name="startLocation">Posición del carácter en toSearch donde comienza la búsqueda.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Byte[])">
+      <summary>Devuelve el valor de la suma de comprobación calculada sobre el argumento de entrada.</summary>
+      <returns>Suma de comprobación calculada sobre el valor de entrada.</returns>
+      <param name="arg1">Matriz de caracteres para la que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Byte[],System.Byte[])">
+      <summary>Devuelve el valor de la suma de comprobación calculada sobre los argumentos de entrada.</summary>
+      <returns>Suma de comprobación calculada sobre los valores de entrada.</returns>
+      <param name="arg1">Matriz de caracteres para la que se calcula la suma de comprobación.</param>
+      <param name="arg2">Matriz de caracteres para la que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Byte[],System.Byte[],System.Byte[])">
+      <summary>Devuelve el valor de la suma de comprobación calculada sobre los argumentos de entrada.</summary>
+      <returns>Suma de comprobación calculada sobre los valores de entrada.</returns>
+      <param name="arg1">Matriz de caracteres para la que se calcula la suma de comprobación.</param>
+      <param name="arg2">Matriz de caracteres para la que se calcula la suma de comprobación.</param>
+      <param name="arg3">Matriz de caracteres para la que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Nullable{System.Boolean})">
+      <summary>Devuelve el valor de la suma de comprobación calculada sobre el argumento de entrada.</summary>
+      <returns>Suma de comprobación calculada sobre el valor de entrada.</returns>
+      <param name="arg1">Valor para el que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Nullable{System.Boolean},System.Nullable{System.Boolean})">
+      <summary>Devuelve el valor de la suma de comprobación calculada sobre los argumentos de entrada.</summary>
+      <returns>Suma de comprobación calculada sobre los valores de entrada.</returns>
+      <param name="arg1">Valor para el que se calcula la suma de comprobación.</param>
+      <param name="arg2">Valor para el que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean})">
+      <summary>Devuelve el valor de la suma de comprobación calculada sobre los argumentos de entrada.</summary>
+      <returns>Suma de comprobación calculada sobre los valores de entrada.</returns>
+      <param name="arg1">Valor para el que se calcula la suma de comprobación.</param>
+      <param name="arg2">Valor para el que se calcula la suma de comprobación.</param>
+      <param name="arg3">Valor para el que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Nullable{System.DateTime})">
+      <summary>Devuelve el valor de la suma de comprobación calculada sobre el argumento de entrada.</summary>
+      <returns>Suma de comprobación calculada sobre los valores de entrada.</returns>
+      <param name="arg1">Valor para el que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+      <summary>Devuelve el valor de la suma de comprobación calculada sobre los argumentos de entrada.</summary>
+      <returns>Suma de comprobación calculada sobre los valores de entrada.</returns>
+      <param name="arg1">Valor para el que se calcula la suma de comprobación.</param>
+      <param name="arg2">Valor para el que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+      <summary>Devuelve el valor de la suma de comprobación calculada sobre los argumentos de entrada.</summary>
+      <returns>Suma de comprobación calculada sobre los valores de entrada.</returns>
+      <param name="arg1">Valor para el que se calcula la suma de comprobación.</param>
+      <param name="arg2">Valor para el que se calcula la suma de comprobación.</param>
+      <param name="arg3">Valor para el que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Nullable{System.DateTimeOffset})">
+      <summary>Devuelve el valor de la suma de comprobación calculada sobre el argumento de entrada.</summary>
+      <returns>Suma de comprobación calculada sobre el valor de entrada.</returns>
+      <param name="arg1">Valor para el que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
+      <summary>Devuelve el valor de la suma de comprobación calculada sobre los argumentos de entrada.</summary>
+      <returns>Suma de comprobación calculada sobre los valores de entrada.</returns>
+      <param name="arg1">Valor para el que se calcula la suma de comprobación.</param>
+      <param name="arg2">Valor para el que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
+      <summary>Devuelve el valor de la suma de comprobación calculada sobre los argumentos de entrada.</summary>
+      <returns>Suma de comprobación calculada sobre los valores de entrada.</returns>
+      <param name="arg1">Valor para el que se calcula la suma de comprobación.</param>
+      <param name="arg2">Valor para el que se calcula la suma de comprobación.</param>
+      <param name="arg3">Valor para el que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Nullable{System.Decimal})">
+      <summary>Devuelve el valor de la suma de comprobación calculada sobre el argumento de entrada.</summary>
+      <returns>Suma de comprobación calculada sobre el valor de entrada.</returns>
+      <param name="arg1">Valor para el que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Nullable{System.Decimal},System.Nullable{System.Decimal})">
+      <summary>Devuelve el valor de la suma de comprobación calculada sobre los argumentos de entrada.</summary>
+      <returns>Suma de comprobación calculada sobre los valores de entrada.</returns>
+      <param name="arg1">Valor para el que se calcula la suma de comprobación.</param>
+      <param name="arg2">Valor para el que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal})">
+      <summary>Devuelve el valor de la suma de comprobación calculada sobre los argumentos de entrada.</summary>
+      <returns>Suma de comprobación calculada sobre los valores de entrada.</returns>
+      <param name="arg1">Valor para el que se calcula la suma de comprobación.</param>
+      <param name="arg2">Valor para el que se calcula la suma de comprobación.</param>
+      <param name="arg3">Valor para el que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Nullable{System.Double})">
+      <summary>Devuelve el valor de la suma de comprobación calculada sobre el argumento de entrada.</summary>
+      <returns>Suma de comprobación calculada sobre el valor de entrada.</returns>
+      <param name="arg1">Valor para el que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Nullable{System.Double},System.Nullable{System.Double})">
+      <summary>Devuelve el valor de la suma de comprobación calculada sobre los argumentos de entrada.</summary>
+      <returns>Suma de comprobación calculada sobre los valores de entrada.</returns>
+      <param name="arg1">Valor para el que se calcula la suma de comprobación.</param>
+      <param name="arg2">Valor para el que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Nullable{System.Double},System.Nullable{System.Double},System.Nullable{System.Double})">
+      <summary>Devuelve el valor de la suma de comprobación calculada sobre los argumentos de entrada.</summary>
+      <returns>Suma de comprobación calculada sobre los valores de entrada.</returns>
+      <param name="arg1">Valor para el que se calcula la suma de comprobación.</param>
+      <param name="arg2">Valor para el que se calcula la suma de comprobación.</param>
+      <param name="arg3">Valor para el que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Nullable{System.Guid})">
+      <summary>Devuelve el valor de la suma de comprobación calculada sobre el argumento de entrada.</summary>
+      <returns>Suma de comprobación calculada sobre el valor de entrada.</returns>
+      <param name="arg1">Valor para el que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Nullable{System.Guid},System.Nullable{System.Guid})">
+      <summary>Devuelve el valor de la suma de comprobación calculada sobre los argumentos de entrada.</summary>
+      <returns>Suma de comprobación calculada sobre los valores de entrada.</returns>
+      <param name="arg1">Valor para el que se calcula la suma de comprobación.</param>
+      <param name="arg2">Valor para el que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Nullable{System.Guid},System.Nullable{System.Guid},System.Nullable{System.Guid})">
+      <summary>Devuelve el valor de la suma de comprobación calculada sobre los argumentos de entrada.</summary>
+      <returns>Suma de comprobación calculada sobre los valores de entrada.</returns>
+      <param name="arg1">Valor para el que se calcula la suma de comprobación.</param>
+      <param name="arg2">Valor para el que se calcula la suma de comprobación.</param>
+      <param name="arg3">Valor para el que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Nullable{System.TimeSpan})">
+      <summary>Devuelve el valor de la suma de comprobación calculada sobre el argumento de entrada.</summary>
+      <returns>Suma de comprobación calculada sobre el valor de entrada.</returns>
+      <param name="arg1">Valor para el que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan})">
+      <summary>Devuelve el valor de la suma de comprobación calculada sobre los argumentos de entrada.</summary>
+      <returns>Suma de comprobación calculada sobre los valores de entrada.</returns>
+      <param name="arg1">Valor para el que se calcula la suma de comprobación.</param>
+      <param name="arg2">Valor para el que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan})">
+      <summary>Devuelve el valor de la suma de comprobación calculada sobre los argumentos de entrada.</summary>
+      <returns>Suma de comprobación calculada sobre los valores de entrada.</returns>
+      <param name="arg1">Valor para el que se calcula la suma de comprobación.</param>
+      <param name="arg2">Valor para el que se calcula la suma de comprobación.</param>
+      <param name="arg3">Valor para el que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.String)">
+      <summary>Devuelve el valor de la suma de comprobación calculada sobre el argumento de entrada.</summary>
+      <returns>Suma de comprobación calculada sobre el valor de entrada.</returns>
+      <param name="arg1">Valor para el que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.String,System.String)">
+      <summary>Devuelve el valor de la suma de comprobación calculada sobre los argumentos de entrada.</summary>
+      <returns>Suma de comprobación calculada sobre los valores de entrada.</returns>
+      <param name="arg1">Valor para el que se calcula la suma de comprobación.</param>
+      <param name="arg2">Valor para el que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.String,System.String,System.String)">
+      <summary>Devuelve el valor de la suma de comprobación calculada sobre los argumentos de entrada.</summary>
+      <returns>Suma de comprobación calculada sobre los valores de entrada.</returns>
+      <param name="arg1">Valor para el que se calcula la suma de comprobación.</param>
+      <param name="arg2">Valor para el que se calcula la suma de comprobación.</param>
+      <param name="arg3">Valor para el que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.ChecksumAggregate(System.Collections.Generic.IEnumerable{System.Int32})">
+      <summary>Devuelve la suma de comprobación de los valores de una colección.Los valores NULL se pasan por alto.</summary>
+      <returns>Suma de comprobación calculada de la colección de entrada.</returns>
+      <param name="arg">Colección de valores sobre los que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.ChecksumAggregate(System.Collections.Generic.IEnumerable{System.Nullable{System.Int32}})">
+      <summary>Devuelve la suma de comprobación de los valores de una colección.Los valores NULL se pasan por alto.</summary>
+      <returns>Suma de comprobación calculada de la colección de entrada.</returns>
+      <param name="arg">Colección de valores sobre los que se calcula la suma de comprobación.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Cos(System.Nullable{System.Decimal})">
+      <summary>Devuelve el coseno trigonométrico del ángulo especificado, en radianes, en la expresión especificada.</summary>
+      <returns>Coseno trigonométrico del ángulo especificado.</returns>
+      <param name="arg">Ángulo, medido en radianes.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Cos(System.Nullable{System.Double})">
+      <summary>Devuelve el coseno trigonométrico del ángulo especificado, en radianes, en la expresión especificada.</summary>
+      <returns>Coseno trigonométrico del ángulo especificado.</returns>
+      <param name="arg">Ángulo, medido en radianes.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Cot(System.Nullable{System.Decimal})">
+      <summary>Función matemática que devuelve la cotangente trigonométrica del ángulo especificado, en radianes.</summary>
+      <returns>Cotangente trigonométrica del ángulo especificado.</returns>
+      <param name="arg">Ángulo, medido en radianes.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Cot(System.Nullable{System.Double})">
+      <summary>Función matemática que devuelve la cotangente trigonométrica del ángulo especificado, en radianes.</summary>
+      <returns>Cotangente trigonométrica del ángulo especificado.</returns>
+      <param name="arg">Ángulo, medido en radianes.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.CurrentTimestamp">
+      <summary>Devuelve la fecha y la hora actuales.</summary>
+      <returns>Fecha y hora actuales.</returns>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.CurrentUser">
+      <summary>Devuelve el nombre del usuario actual.</summary>
+      <returns>Nombre del usuario actual.</returns>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DataLength(System.Byte[])">
+      <summary>Devuelve el número de bytes utilizados para representar cualquier expresión.</summary>
+      <returns>Número de bytes del valor de entrada.</returns>
+      <param name="arg">Valor cuya longitud se va a examinar.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DataLength(System.Nullable{System.Boolean})">
+      <summary>Devuelve el número de bytes utilizados para representar cualquier expresión.</summary>
+      <returns>Número de bytes del valor de entrada.</returns>
+      <param name="arg">Valor que se va a examinar para la longitud de datos.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DataLength(System.Nullable{System.DateTime})">
+      <summary>Devuelve el número de bytes utilizados para representar cualquier expresión.</summary>
+      <returns>Número de bytes del valor de entrada.</returns>
+      <param name="arg">Valor que se va a examinar para la longitud de datos.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DataLength(System.Nullable{System.DateTimeOffset})">
+      <summary>Devuelve el número de bytes utilizados para representar cualquier expresión.</summary>
+      <returns>Número de bytes del valor de entrada.</returns>
+      <param name="arg">Valor que se va a examinar para la longitud de datos.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DataLength(System.Nullable{System.Decimal})">
+      <summary>Devuelve el número de bytes utilizados para representar cualquier expresión.</summary>
+      <returns>Número de bytes del valor de entrada.</returns>
+      <param name="arg">Valor que se va a examinar para la longitud de datos.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DataLength(System.Nullable{System.Double})">
+      <summary>Devuelve el número de bytes utilizados para representar cualquier expresión.</summary>
+      <returns>Número de bytes del valor de entrada.</returns>
+      <param name="arg">Valor que se va a examinar para la longitud de datos.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DataLength(System.Nullable{System.Guid})">
+      <summary>Devuelve el número de bytes utilizados para representar cualquier expresión.</summary>
+      <returns>Número de bytes del valor de entrada.</returns>
+      <param name="arg">Valor que se va a examinar para la longitud de datos.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DataLength(System.Nullable{System.TimeSpan})">
+      <summary>Devuelve el número de bytes utilizados para representar cualquier expresión.</summary>
+      <returns>Número de bytes del valor de entrada.</returns>
+      <param name="arg">Valor que se va a examinar para la longitud de datos.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DataLength(System.String)">
+      <summary>Devuelve el número de bytes utilizados para representar cualquier expresión.</summary>
+      <returns>Número de bytes del valor de entrada.</returns>
+      <param name="arg">Valor que se va a examinar para la longitud de datos.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DateAdd(System.String,System.Nullable{System.Double},System.Nullable{System.DateTime})">
+      <summary>Devuelve un nuevo valor datetime que se basa en agregar un intervalo a la fecha especificada.</summary>
+      <returns>Nueva fecha.</returns>
+      <param name="datePartArg">Parte de la fecha que se va a incrementar.</param>
+      <param name="number">Valor que se usa para incrementar una fecha en la cantidad especificada.</param>
+      <param name="date">Fecha que se va a incrementar.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DateAdd(System.String,System.Nullable{System.Double},System.Nullable{System.DateTimeOffset})">
+      <summary>Devuelve un nuevo valor de fecha que se basa en agregar un intervalo a la fecha especificada.</summary>
+      <returns>Nuevo momento en el tiempo, expresado como una fecha y hora del día, relativo a la hora universal coordinada (UTC).</returns>
+      <param name="datePartArg">Parte de la fecha que se va a incrementar.</param>
+      <param name="number">Valor que se usa para incrementar una fecha en la cantidad especificada.</param>
+      <param name="dateTimeOffsetArg">Fecha que se va a incrementar.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DateAdd(System.String,System.Nullable{System.Double},System.Nullable{System.TimeSpan})">
+      <summary>Devuelve un nuevo valor de intervalo de tiempo basado en agregar un intervalo al intervalo de tiempo especificado.</summary>
+      <returns>Nuevo intervalo de tiempo.</returns>
+      <param name="datePartArg">Parte de la fecha que se va a incrementar.</param>
+      <param name="number">Valor que se usa para incrementar una fecha en la cantidad especificada.</param>
+      <param name="time">Intervalo de tiempo que se va a incrementar.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DateAdd(System.String,System.Nullable{System.Double},System.String)">
+      <summary>Devuelve un nuevo valor datetime que se basa en agregar un intervalo a la fecha especificada.</summary>
+      <returns>
+        <see cref="T:System.Nullable`1" /> de un valor <see cref="T:System.DateTime" /> que es la nueva fecha.</returns>
+      <param name="datePartArg">Parte de la fecha que se va a incrementar.</param>
+      <param name="number">Valor que se usa para incrementar una fecha en la cantidad especificada.</param>
+      <param name="date">Fecha que se va a incrementar.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DateDiff(System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+      <summary>Devuelve el recuento de los límites del datepart especificados entre la fecha de inicio y la fecha de fin definidas.</summary>
+      <returns>Número de intervalos de tiempo que hay entre dos fechas.</returns>
+      <param name="datePartArg">Parte de la fecha que se usa para calcular el número de intervalos de tiempo diferentes.</param>
+      <param name="startDate">Primera fecha.</param>
+      <param name="endDate">Segunda fecha.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DateDiff(System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTimeOffset})">
+      <summary>Devuelve el recuento de los límites del datepart especificados entre la fecha de inicio y la fecha de fin definidas.</summary>
+      <returns>Número de intervalos de tiempo que hay entre dos fechas.</returns>
+      <param name="datePartArg">Parte de la fecha que se usa para calcular el número de intervalos de tiempo diferentes.</param>
+      <param name="startDate">Primera fecha.</param>
+      <param name="endDate">Segunda fecha.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DateDiff(System.String,System.Nullable{System.DateTime},System.Nullable{System.TimeSpan})">
+      <summary>Devuelve el recuento de los límites del datepart especificados entre la fecha de inicio y la fecha de fin definidas.</summary>
+      <returns>Número de intervalos de tiempo que hay entre dos fechas.</returns>
+      <param name="datePartArg">Parte de la fecha que se usa para calcular el número de intervalos de tiempo diferentes.</param>
+      <param name="startDate">Primera fecha.</param>
+      <param name="endDate">Segunda fecha.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DateDiff(System.String,System.Nullable{System.DateTime},System.String)">
+      <summary>Devuelve el recuento de los límites del datepart especificados entre la fecha de inicio y la fecha de fin definidas.</summary>
+      <returns>Número de intervalos de tiempo que hay entre dos fechas.</returns>
+      <param name="datePartArg">Parte de la fecha que se usa para calcular el número de intervalos de tiempo diferentes.</param>
+      <param name="startDate">Primera fecha.</param>
+      <param name="endDate">Segunda fecha.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DateDiff(System.String,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTime})">
+      <summary>Devuelve el recuento de los límites del datepart especificados entre la fecha de inicio y la fecha de fin definidas.</summary>
+      <returns>Número de intervalos de tiempo que hay entre dos fechas.</returns>
+      <param name="datePartArg">Parte de la fecha que se usa para calcular el número de intervalos de tiempo diferentes.</param>
+      <param name="startDate">Primera fecha.</param>
+      <param name="endDate">Segunda fecha.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DateDiff(System.String,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
+      <summary>Devuelve el recuento de los límites del datepart especificados entre la fecha de inicio y la fecha de fin definidas.</summary>
+      <returns>Número de intervalos de tiempo que hay entre dos fechas.</returns>
+      <param name="datePartArg">Parte de la fecha que se usa para calcular el número de intervalos de tiempo diferentes.</param>
+      <param name="startDate">Primera fecha.</param>
+      <param name="endDate">Segunda fecha.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DateDiff(System.String,System.Nullable{System.DateTimeOffset},System.Nullable{System.TimeSpan})">
+      <summary>Devuelve el recuento de los límites del datepart especificados entre la fecha de inicio y la fecha de fin definidas.</summary>
+      <returns>Número de intervalos de tiempo que hay entre dos fechas.</returns>
+      <param name="datePartArg">Parte de la fecha que se usa para calcular el número de intervalos de tiempo diferentes.</param>
+      <param name="startDate">Primera fecha.</param>
+      <param name="endDate">Segunda fecha.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DateDiff(System.String,System.Nullable{System.DateTimeOffset},System.String)">
+      <summary>Devuelve el recuento de los límites del datepart especificados entre la fecha de inicio y la fecha de fin definidas.</summary>
+      <returns>Número de intervalos de tiempo que hay entre dos fechas.</returns>
+      <param name="datePartArg">Parte de la fecha que se usa para calcular el número de intervalos de tiempo diferentes.</param>
+      <param name="startDate">Primera fecha.</param>
+      <param name="endDate">Segunda fecha.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DateDiff(System.String,System.Nullable{System.TimeSpan},System.Nullable{System.DateTime})">
+      <summary>Devuelve el recuento de los límites del datepart especificados entre la fecha de inicio y la fecha de fin definidas.</summary>
+      <returns>Número de intervalos de tiempo que hay entre dos fechas.</returns>
+      <param name="datePartArg">Parte de la fecha que se usa para calcular el número de intervalos de tiempo diferentes.</param>
+      <param name="startDate">Primera fecha.</param>
+      <param name="endDate">Segunda fecha.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DateDiff(System.String,System.Nullable{System.TimeSpan},System.Nullable{System.DateTimeOffset})">
+      <summary>Devuelve el recuento de los límites del datepart especificados entre la fecha de inicio y la fecha de fin definidas.</summary>
+      <returns>Número de intervalos de tiempo que hay entre dos fechas.</returns>
+      <param name="datePartArg">Parte de la fecha que se usa para calcular el número de intervalos de tiempo diferentes.</param>
+      <param name="startDate">Primera fecha.</param>
+      <param name="endDate">Segunda fecha.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DateDiff(System.String,System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan})">
+      <summary>Devuelve el recuento de los límites del datepart especificados entre la fecha de inicio y la fecha de fin definidas.</summary>
+      <returns>Número de intervalos de tiempo que hay entre dos fechas.</returns>
+      <param name="datePartArg">Parte de la fecha que se usa para calcular el número de intervalos de tiempo diferentes.</param>
+      <param name="startDate">Primera fecha.</param>
+      <param name="endDate">Segunda fecha.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DateDiff(System.String,System.Nullable{System.TimeSpan},System.String)">
+      <summary>Devuelve el recuento de los límites del datepart especificados entre la fecha de inicio y la fecha de fin definidas.</summary>
+      <returns>Número de intervalos de tiempo que hay entre dos fechas.</returns>
+      <param name="datePartArg">Parte de la fecha que se usa para calcular el número de intervalos de tiempo diferentes.</param>
+      <param name="startDate">Primera fecha.</param>
+      <param name="endDate">Segunda fecha.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DateDiff(System.String,System.String,System.Nullable{System.DateTime})">
+      <summary>Devuelve el recuento de los límites del datepart especificados entre la fecha de inicio y la fecha de fin definidas.</summary>
+      <returns>Número de intervalos de tiempo que hay entre dos fechas.</returns>
+      <param name="datePartArg">Parte de la fecha que se usa para calcular el número de intervalos de tiempo diferentes.</param>
+      <param name="startDate">Primera fecha.</param>
+      <param name="endDate">Segunda fecha.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DateDiff(System.String,System.String,System.Nullable{System.DateTimeOffset})">
+      <summary>Devuelve el recuento de los límites del datepart especificados entre la fecha de inicio y la fecha de fin definidas.</summary>
+      <returns>Número de intervalos de tiempo que hay entre dos fechas.</returns>
+      <param name="datePartArg">Parte de la fecha que se usa para calcular el número de intervalos de tiempo diferentes.</param>
+      <param name="startDate">Primera fecha.</param>
+      <param name="endDate">Segunda fecha.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DateDiff(System.String,System.String,System.Nullable{System.TimeSpan})">
+      <summary>Devuelve el recuento de los límites del datepart especificados entre la fecha de inicio y la fecha de fin definidas.</summary>
+      <returns>Valor que especifica el número de intervalos de tiempo entre dos fechas.</returns>
+      <param name="datePartArg">Parte de la fecha que se usa para calcular el número de intervalos de tiempo diferentes.</param>
+      <param name="startDate">Primera fecha.</param>
+      <param name="endDate">Segunda fecha.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DateDiff(System.String,System.String,System.String)">
+      <summary>Devuelve el recuento de los límites del datepart especificados entre la fecha de inicio y la fecha de fin definidas.</summary>
+      <returns>Número de intervalos de tiempo que hay entre dos fechas.</returns>
+      <param name="datePartArg">Parte de la fecha que se usa para calcular el número de intervalos de tiempo diferentes.</param>
+      <param name="startDate">Primera fecha.</param>
+      <param name="endDate">Segunda fecha.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DateName(System.String,System.Nullable{System.DateTime})">
+      <summary>Devuelve una cadena de caracteres que representa el datepart de la fecha especificada.</summary>
+      <returns>Parte especificada de la fecha especificada.</returns>
+      <param name="datePartArg">Parte de la fecha que se usa para calcular el número de intervalos de tiempo diferentes.</param>
+      <param name="date">Fecha.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DateName(System.String,System.Nullable{System.DateTimeOffset})">
+      <summary>Devuelve una cadena de caracteres que representa el datepart de la fecha especificada.</summary>
+      <returns>Parte especificada de la fecha especificada.</returns>
+      <param name="datePartArg">Parte de la fecha que se usa para calcular el número de intervalos de tiempo diferentes.</param>
+      <param name="date">Fecha.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DateName(System.String,System.Nullable{System.TimeSpan})">
+      <summary>Devuelve una cadena de caracteres que representa el datepart de la fecha especificada.</summary>
+      <returns>Parte especificada de la fecha especificada.</returns>
+      <param name="datePartArg">Parte de la fecha que se usa para calcular el número de intervalos de tiempo diferentes.</param>
+      <param name="date">Fecha.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DateName(System.String,System.String)">
+      <summary>Devuelve una cadena de caracteres que representa el datepart de la fecha especificada.</summary>
+      <returns>Parte especificada de la fecha especificada.</returns>
+      <param name="datePartArg">Parte de la fecha que se usa para calcular el número de intervalos de tiempo diferentes.</param>
+      <param name="date">Fecha.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DatePart(System.String,System.Nullable{System.DateTime})">
+      <summary>Devuelve un número entero que representa el datepart especificado de la fecha especificada.</summary>
+      <returns>Datepart especificado de la fecha especificada.</returns>
+      <param name="datePartArg">Parte de la fecha que se usa para devolver el valor.</param>
+      <param name="date">Fecha.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DatePart(System.String,System.Nullable{System.DateTimeOffset})">
+      <summary>Devuelve un número entero que representa el datepart especificado de la fecha especificada.</summary>
+      <returns>Datepart especificado de la fecha especificada.</returns>
+      <param name="datePartArg">Parte de la fecha que se usa para devolver el valor.</param>
+      <param name="date">Fecha.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DatePart(System.String,System.Nullable{System.TimeSpan})">
+      <summary>Devuelve un número entero que representa el datepart especificado de la fecha especificada.</summary>
+      <returns>Datepart especificado de la fecha especificada.</returns>
+      <param name="datePartArg">Parte de la fecha que se usa para devolver el valor.</param>
+      <param name="date">Fecha.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DatePart(System.String,System.String)">
+      <summary>Devuelve un número entero que representa el datepart especificado de la fecha especificada.</summary>
+      <returns>Datepart especificado de la fecha especificada.</returns>
+      <param name="datePartArg">Parte de la fecha que se usa para devolver el valor.</param>
+      <param name="date">Fecha.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Degrees(System.Nullable{System.Decimal})">
+      <summary>Devuelve el ángulo correspondiente en grados para un ángulo especificado en radianes.</summary>
+      <returns>Ángulo especificado convertido en grados.</returns>
+      <param name="arg1">Ángulo, medido en radianes.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Degrees(System.Nullable{System.Double})">
+      <summary>Devuelve el ángulo correspondiente en grados para un ángulo especificado en radianes.</summary>
+      <returns>Ángulo especificado convertido en grados.</returns>
+      <param name="arg1">Ángulo, medido en radianes.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Degrees(System.Nullable{System.Int32})">
+      <summary>Devuelve el ángulo correspondiente en grados para un ángulo especificado en radianes.</summary>
+      <returns>Ángulo especificado convertido en grados.</returns>
+      <param name="arg1">Ángulo, medido en radianes.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Degrees(System.Nullable{System.Int64})">
+      <summary>Devuelve el ángulo correspondiente en grados para un ángulo especificado en radianes.</summary>
+      <returns>Ángulo especificado convertido en grados.</returns>
+      <param name="arg1">Ángulo, medido en radianes.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Difference(System.String,System.String)">
+      <summary>Devuelve un valor entero que indica la diferencia entre los valores de SOUNDEX de dos expresiones de caracteres.</summary>
+      <returns>Diferencia de SOUNDEX entre las dos cadenas.</returns>
+      <param name="string1">Primera cadena.</param>
+      <param name="string2">Segunda cadena.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Exp(System.Nullable{System.Decimal})">
+      <summary>Devuelve el valor exponencial de la expresión flotante especificada.</summary>
+      <returns>Constante e elevada a la potencia del valor de entrada.</returns>
+      <param name="arg">Valor de entrada.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Exp(System.Nullable{System.Double})">
+      <summary>Devuelve el valor exponencial de la expresión flotante especificada.</summary>
+      <returns>Constante e elevada a la potencia del valor de entrada.</returns>
+      <param name="arg">Valor de entrada.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.GetDate">
+      <summary>Devuelve la marca de tiempo del sistema de base de datos actual como un valor datetime sin el desplazamiento de zona horaria de la base de datos.Este valor se deriva del sistema operativo del equipo en el que se está ejecutando la instancia de SQL Server.</summary>
+      <returns>Marca de tiempo de la base de datos actual.</returns>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.GetUtcDate">
+      <summary>Devuelve la marca de tiempo del sistema de base de datos actual como un valor datetime.El desplazamiento de zona horaria de la base de datos no está incluido.Este valor representa la hora UTC (Hora universal coordinada) actual.Este valor se deriva del sistema operativo del equipo en el que se está ejecutando la instancia de SQL Server.</summary>
+      <returns>Marca de tiempo UTC de la base de datos actual.</returns>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.HostName">
+      <summary>Devuelve el nombre de la estación de trabajo.</summary>
+      <returns>Nombre de la estación de trabajo.</returns>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.IsDate(System.String)">
+      <summary>Indica si el valor de entrada es una fecha u hora válida.</summary>
+      <returns>1 si la expresión de entrada es una fecha válida o un valor de datetime o de los tipos de datos smalldatetime; de lo contrario, 0.</returns>
+      <param name="arg">Valor probado.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.IsNumeric(System.String)">
+      <summary>Indica si el valor de entrada es un tipo numérico válido.</summary>
+      <returns>1 si la expresión de entrada es de un tipo de datos numéricos válido; de lo contrario, 0.</returns>
+      <param name="arg">Expresión de cadena.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Log(System.Nullable{System.Decimal})">
+      <summary>Devuelve el logaritmo natural del valor de entrada especificado.</summary>
+      <returns>Logaritmo natural del valor de entrada.</returns>
+      <param name="arg">Expresión numérica.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Log(System.Nullable{System.Double})">
+      <summary>Devuelve el logaritmo natural del valor de entrada especificado.</summary>
+      <returns>Logaritmo natural del valor de entrada.</returns>
+      <param name="arg">Expresión numérica.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Log10(System.Nullable{System.Decimal})">
+      <summary>Devuelve el logaritmo en base 10 del valor de entrada especificado.</summary>
+      <returns>Logaritmo en base 10 del valor de entrada.</returns>
+      <param name="arg">Expresión numérica.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Log10(System.Nullable{System.Double})">
+      <summary>Devuelve el logaritmo en base 10 del valor de entrada especificado.</summary>
+      <returns>Logaritmo en base 10 del valor de entrada.</returns>
+      <param name="arg">Expresión numérica.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.NChar(System.Nullable{System.Int32})">
+      <summary>Devuelve el carácter Unicode correspondiente al código entero dado, tal como se define en el estándar Unicode.</summary>
+      <returns>Carácter correspondiente al código del carácter de entrada.</returns>
+      <param name="arg">Código de carácter.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.PatIndex(System.String,System.String)">
+      <summary>Devuelve la posición inicial de la primera aparición de un patrón en una expresión especificada, o cero si no se encuentra el modelo, en todo el texto válido y los tipos de datos de caracteres.</summary>
+      <returns>Posición inicial de caracteres donde se encontró el patrón de la cadena.</returns>
+      <param name="stringPattern">Patrón de cadena que se va a buscar.</param>
+      <param name="target">Cadena que se va a buscar.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Pi">
+      <summary>Devuelve el valor constante de Pi.</summary>
+      <returns>Valor numérico de Pi.</returns>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.QuoteName(System.String)">
+      <summary>Devuelve una cadena Unicode a la que se han agregado delimitadores para convertir la cadena de entrada en un identificador delimitado válido de Microsoft SQL Server.</summary>
+      <returns>Cadena original a la que se han agregado corchetes.</returns>
+      <param name="stringArg">Expresión a la que se agregarán los caracteres de comillas.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.QuoteName(System.String,System.String)">
+      <summary>Devuelve una cadena Unicode a la que se han agregado delimitadores para convertir la cadena de entrada en un identificador delimitado válido de Microsoft SQL Server.</summary>
+      <returns>Cadena original a la que se han agregado los caracteres de comillas.</returns>
+      <param name="stringArg">Expresión a la que se agregarán los caracteres de comillas.</param>
+      <param name="quoteCharacter">Cadena de un solo carácter que se utiliza como delimitador.Puede ser una comilla simple ('), un corchete izquierdo o derecho ([ ]) o una comilla doble (").Si no se especifica el carácter de comillas, se usarán corchetes.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Radians(System.Nullable{System.Decimal})">
+      <summary>Devuelve la medida en radianes correspondiente al ángulo especificado en grados.</summary>
+      <returns>Medida en radianes del ángulo especificado.</returns>
+      <param name="arg">Ángulo, medido en grados.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Radians(System.Nullable{System.Double})">
+      <summary>Devuelve la medida en radianes correspondiente al ángulo especificado en grados.</summary>
+      <returns>Medida en radianes del ángulo especificado.</returns>
+      <param name="arg">Ángulo, medido en grados.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Radians(System.Nullable{System.Int32})">
+      <summary>Devuelve la medida en radianes correspondiente al ángulo especificado en grados.</summary>
+      <returns>Medida en radianes del ángulo especificado.</returns>
+      <param name="arg">Ángulo, medido en grados.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Radians(System.Nullable{System.Int64})">
+      <summary>Devuelve la medida en radianes correspondiente al ángulo especificado en grados.</summary>
+      <returns>Medida en radianes del ángulo especificado.</returns>
+      <param name="arg">Ángulo, medido en grados.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Rand">
+      <summary>Devuelve un valor flotante pseudoaleatorio entre 0 y 1, excluidos.</summary>
+      <returns>Valor pseudoaleatorio.</returns>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Rand(System.Nullable{System.Int32})">
+      <summary>Devuelve un valor flotante pseudoaleatorio entre 0 y 1, excluidos.</summary>
+      <returns>Valor pseudoaleatorio.</returns>
+      <param name="seed">Valor de inicialización.Si la inicialización no se especifica, el motor de base de datos de SQL Server asigna uno de forma aleatoria.Para un valor de inicialización especificado, el resultado devuelto es siempre el mismo.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Replicate(System.String,System.Nullable{System.Int32})">
+      <summary>Repite un valor de cadena un número especificado de veces.</summary>
+      <returns>Cadena de destino, repetida el número de veces especificado por recuento.</returns>
+      <param name="target">Cadena válida.</param>
+      <param name="count">Valor que especifica cuántas veces se va a repetir destino.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Sign(System.Nullable{System.Decimal})">
+      <summary>Devuelve el signo positivo (+1), cero (0) o negativo (-1) de la expresión especificada.</summary>
+      <returns>Signo de la expresión de entrada.</returns>
+      <param name="arg">Expresión numérica.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Sign(System.Nullable{System.Double})">
+      <summary>Devuelve el signo positivo (+1), cero (0) o negativo (-1) de la expresión especificada.</summary>
+      <returns>Signo de la expresión de entrada.</returns>
+      <param name="arg">Expresión numérica.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Sign(System.Nullable{System.Int32})">
+      <summary>Devuelve el signo positivo (+1), cero (0) o negativo (-1) de la expresión especificada.</summary>
+      <returns>Signo de la expresión de entrada.</returns>
+      <param name="arg">Expresión numérica.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Sign(System.Nullable{System.Int64})">
+      <summary>Devuelve el signo positivo (+1), cero (0) o negativo (-1) de la expresión especificada.</summary>
+      <returns>Signo de la expresión de entrada.</returns>
+      <param name="arg">Expresión numérica.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Sin(System.Nullable{System.Decimal})">
+      <summary>Devuelve el seno trigonométrico del ángulo especificado.</summary>
+      <returns>Seno trigonométrico de la expresión de entrada.</returns>
+      <param name="arg">Ángulo, medido en radianes.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Sin(System.Nullable{System.Double})">
+      <summary>Devuelve el seno trigonométrico del ángulo especificado.</summary>
+      <returns>Seno trigonométrico de la expresión de entrada.</returns>
+      <param name="arg">Ángulo, medido en radianes.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.SoundCode(System.String)">
+      <summary>Convierte una cadena alfanumérica en un código de cuatro caracteres (SOUNDEX) que se usa para buscar palabras o nombres con un sonido parecido.</summary>
+      <returns>Código SOUNDEX de la cadena de entrada.</returns>
+      <param name="arg">Cadena válida.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Space(System.Nullable{System.Int32})">
+      <summary>Devuelve una cadena de espacios repetidos.</summary>
+      <returns>Una cadena compuesta por el número especificado de espacios.</returns>
+      <param name="arg1">Número de espacios.Si es negativo, se devuelve una cadena nula.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Square(System.Nullable{System.Decimal})">
+      <summary>Devuelve el cuadrado del número especificado.</summary>
+      <returns>Cuadrado del valor de entrada.</returns>
+      <param name="arg1">Expresión numérica.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Square(System.Nullable{System.Double})">
+      <summary>Devuelve el cuadrado del número especificado.</summary>
+      <returns>Cuadrado del valor de entrada.</returns>
+      <param name="arg1">Expresión numérica.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.SquareRoot(System.Nullable{System.Decimal})">
+      <summary>Devuelve la raíz cuadrada del número especificado.</summary>
+      <returns>Raíz cuadrada del valor de entrada.</returns>
+      <param name="arg">Expresión numérica.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.SquareRoot(System.Nullable{System.Double})">
+      <summary>Devuelve la raíz cuadrada del número especificado.</summary>
+      <returns>Raíz cuadrada del valor de entrada.</returns>
+      <param name="arg">Expresión numérica.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.StringConvert(System.Nullable{System.Decimal})">
+      <summary>Devuelve datos de caracteres convertidos a partir de datos numéricos.</summary>
+      <returns>Expresión de entrada convertida en una cadena.</returns>
+      <param name="number">Expresión numérica.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.StringConvert(System.Nullable{System.Decimal},System.Nullable{System.Int32})">
+      <summary>Devuelve datos de caracteres convertidos a partir de datos numéricos.</summary>
+      <returns>Expresión de entrada convertida en una cadena.</returns>
+      <param name="number">Expresión numérica.</param>
+      <param name="length">Longitud total de la cadena.Incluye el separador decimal, el signo, los dígitos y los espacios.El valor predeterminado es 10.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.StringConvert(System.Nullable{System.Decimal},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+      <summary>Devuelve datos de caracteres convertidos a partir de datos numéricos.</summary>
+      <returns>Expresión de entrada convertida en una cadena.</returns>
+      <param name="number">Expresión numérica.</param>
+      <param name="length">Longitud total de la cadena.Incluye el separador decimal, el signo, los dígitos y los espacios.El valor predeterminado es 10.</param>
+      <param name="decimalArg">Número de posiciones a la derecha del separador decimal.decimal debe ser menor o igual que 16.Si decimal es mayor que 16, el resultado se trunca a dieciséis lugares a la derecha del separador decimal.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.StringConvert(System.Nullable{System.Double})">
+      <summary>Devuelve datos de caracteres convertidos a partir de datos numéricos.</summary>
+      <returns>Expresión de entrada numérica convertida en una cadena.</returns>
+      <param name="number">Expresión numérica.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.StringConvert(System.Nullable{System.Double},System.Nullable{System.Int32})">
+      <summary>Devuelve datos de caracteres convertidos a partir de datos numéricos.</summary>
+      <returns>Expresión de entrada numérica convertida en una cadena.</returns>
+      <param name="number">Expresión numérica.</param>
+      <param name="length">Longitud total de la cadena.Incluye el separador decimal, el signo, los dígitos y los espacios.El valor predeterminado es 10.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.StringConvert(System.Nullable{System.Double},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+      <summary>Devuelve datos de caracteres convertidos a partir de datos numéricos.</summary>
+      <returns>Expresión de entrada numérica convertida en una cadena.</returns>
+      <param name="number">Expresión numérica.</param>
+      <param name="length">Longitud total de la cadena.Incluye el separador decimal, el signo, los dígitos y los espacios.El valor predeterminado es 10.</param>
+      <param name="decimalArg">Número de posiciones a la derecha del separador decimal.decimal debe ser menor o igual que 16.Si decimal es mayor que 16, el resultado se trunca a dieciséis lugares a la derecha del separador decimal.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Stuff(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+      <summary>Inserta una cadena en otra cadena.Elimina una longitud especificada de caracteres en la cadena de destino en la posición inicial y, a continuación, inserta la segunda cadena en la cadena de destino en la posición inicial.</summary>
+      <returns>Cadena que consta de dos cadenas.</returns>
+      <param name="stringInput">Cadena de destino.</param>
+      <param name="start">Posición del carácter en stringinput donde se va a insertar la cadena de reemplazo.</param>
+      <param name="length">Número de caracteres que se van a eliminar de stringInput.Si la longitud es mayor que stringInput, se produce la eliminación hasta el último carácter en stringReplacement.</param>
+      <param name="stringReplacement">Subcadena que se va a insertar en stringInput.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Tan(System.Nullable{System.Decimal})">
+      <summary>Devuelve la tangente trigonométrica de la expresión de entrada.</summary>
+      <returns>Tangente del ángulo de entrada.</returns>
+      <param name="arg">Ángulo, medido en radianes.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Tan(System.Nullable{System.Double})">
+      <summary>Devuelve la tangente trigonométrica de la expresión de entrada.</summary>
+      <returns>Tangente del ángulo de entrada.</returns>
+      <param name="arg">Ángulo, medido en radianes.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Unicode(System.String)">
+      <summary>Devuelve el valor entero, según la definición del estándar Unicode, para el primer carácter de la expresión de entrada.</summary>
+      <returns>Código de carácter del primer carácter en la cadena de entrada.</returns>
+      <param name="arg">Cadena válida.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.UserName">
+      <summary>Devuelve un nombre de usuario de base de datos que corresponde a un número de identificación especificado.</summary>
+      <returns>Nombre del usuario.</returns>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlFunctions.UserName(System.Nullable{System.Int32})">
+      <summary>Devuelve un nombre de usuario de base de datos que corresponde a un número de identificación especificado.</summary>
+      <returns>Nombre del usuario.</returns>
+      <param name="arg">Identificador de usuario.</param>
+    </member>
+    <member name="T:System.Data.Entity.SqlServer.SqlProviderServices">
+      <summary>Implementación de DbProviderServices para el proveedor SqlClient para SQL Server.</summary>
+    </member>
+    <member name="P:System.Data.Entity.SqlServer.SqlProviderServices.Instance">
+      <summary>Instancia Singleton del tipo SqlProviderServices.</summary>
+    </member>
+    <member name="F:System.Data.Entity.SqlServer.SqlProviderServices.ProviderInvariantName">
+      <summary>Esta es la cadena bien conocida que se utiliza en archivos de configuración y configuración basada en código como el "nombre invariable de proveedor" para especificar Microsoft SQL Server para los servicios de proveedor ADO.NET y Entity Framework.</summary>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlProviderServices.RegisterInfoMessageHandler(System.Data.Common.DbConnection,System.Action{System.String})">
+      <summary>Registra un controlador para procesar mensajes no de error procedentes del proveedor de la base de datos.</summary>
+      <param name="connection">La conexión para la cual recibir información.</param>
+      <param name="handler">El controlador para procesar mensajes.</param>
+    </member>
+    <member name="P:System.Data.Entity.SqlServer.SqlProviderServices.TruncateDecimalsToScale">
+      <summary>Establezca este indicador en falso para evitar que los valores <see cref="T:System.Decimal" /> se trunquen a la escala (número de posiciones decimales) definidas para la columna.El valor predeterminado es true, indicando que los valores decimales se trucarán para evitar romper las aplicaciones existentes que dependen de esta conducta.</summary>
+    </member>
+    <member name="T:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator">
+      <summary>Proveedor para convertir operaciones de migración independientes del proveedor en comandos SQL que se pueden ejecutar en una base de datos de Microsoft SQL Server.</summary>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.#ctor"></member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.BuildColumnType(System.Data.Entity.Migrations.Model.ColumnModel)">
+      <summary>Genera SQL para especificar el tipo de datos de una columna.Este método genera solamente el tipo real, no el SQL para crear la columna.</summary>
+      <returns>SQL que representa el tipo de datos.</returns>
+      <param name="columnModel">Definición de la columna.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.CreateConnection">
+      <summary>Crea una conexión vacía para el proveedor actual.Permite que los proveedores derivados usen una conexión que no sea <see cref="T:System.Data.SqlClient.SqlConnection" />.</summary>
+      <returns>Conexión vacía para el proveedor actual.</returns>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Boolean)">
+      <summary>Genera SQL para especificar un valor predeterminado bool constante que se va a establecer en una columna.Este método genera solamente el valor real, no el SQL para establecer el valor predeterminado.</summary>
+      <returns>SQL que representa el valor predeterminado.</returns>
+      <param name="defaultValue">Valor que hay que establecer.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Byte[])">
+      <summary>Genera SQL para especificar un valor predeterminado byte[] constante que se va a establecer en una columna.Este método genera solamente el valor real, no el SQL para establecer el valor predeterminado.</summary>
+      <returns>SQL que representa el valor predeterminado.</returns>
+      <param name="defaultValue">Valor que hay que establecer.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Collections.Generic.IEnumerable{System.Data.Entity.Migrations.Model.MigrationOperation},System.String)">
+      <summary>Convierte un conjunto de operaciones de migración en SQL específico de Microsoft SQL Server.</summary>
+      <returns>Lista de instrucciones SQL que se van a ejecutar para realizar las operaciones de migración.</returns>
+      <param name="migrationOperations">Operaciones que se van a convertir.</param>
+      <param name="providerManifestToken">Token que representa la versión de SQL Server de destino (es decir, "2005", "2008").</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Migrations.Model.AddColumnOperation)">
+      <summary>Genera SQL para una <see cref="T:System.Data.Entity.Migrations.Model.AddColumnOperation" />.El SQL que se haya generado se debe agregar con el método Statement.</summary>
+      <param name="addColumnOperation">Operación para la que se va a producir SQL.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Migrations.Model.AddForeignKeyOperation)">
+      <summary>Genera SQL para una <see cref="T:System.Data.Entity.Migrations.Model.AddForeignKeyOperation" />.El SQL que se haya generado se debe agregar con el método Statement.</summary>
+      <param name="addForeignKeyOperation">Operación para la que se va a producir SQL.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Migrations.Model.AddPrimaryKeyOperation)">
+      <summary>Genera SQL para una <see cref="T:System.Data.Entity.Migrations.Model.AddPrimaryKeyOperation" />.El SQL que se haya generado se debe agregar con el método Statement.</summary>
+      <param name="addPrimaryKeyOperation">Operación para la que se va a producir SQL.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Migrations.Model.AlterColumnOperation)">
+      <summary>Genera SQL para una <see cref="T:System.Data.Entity.Migrations.Model.AlterColumnOperation" />.El SQL que se haya generado se debe agregar con el método Statement.</summary>
+      <param name="alterColumnOperation">Operación para la que se va a producir SQL.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Migrations.Model.AlterProcedureOperation)">
+      <summary>Genera la operación especificada para modificar un procedimiento.</summary>
+      <param name="alterProcedureOperation">Operación para modificar un procedimiento.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Migrations.Model.CreateIndexOperation)">
+      <summary>Genera SQL para una <see cref="T:System.Data.Entity.Migrations.Model.CreateIndexOperation" />.El SQL que se haya generado se debe agregar con el método Statement.</summary>
+      <param name="createIndexOperation">Operación para la que se va a producir SQL.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Migrations.Model.CreateProcedureOperation)">
+      <summary>Genera la operación especificada para crear un procedimiento.</summary>
+      <param name="createProcedureOperation">Operación para crear un procedimiento.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Migrations.Model.CreateTableOperation)">
+      <summary>Genera SQL para una <see cref="T:System.Data.Entity.Migrations.Model.CreateTableOperation" />.El SQL que se haya generado se debe agregar con el método Statement.</summary>
+      <param name="createTableOperation">Operación para la que se va a producir SQL.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Migrations.Model.DropColumnOperation)">
+      <summary>Genera SQL para una <see cref="T:System.Data.Entity.Migrations.Model.DropColumnOperation" />.El SQL que se haya generado se debe agregar con el método Statement.</summary>
+      <param name="dropColumnOperation">Operación para la que se va a producir SQL.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Migrations.Model.DropForeignKeyOperation)">
+      <summary>Genera SQL para una <see cref="T:System.Data.Entity.Migrations.Model.DropForeignKeyOperation" />.El SQL que se haya generado se debe agregar con el método Statement.</summary>
+      <param name="dropForeignKeyOperation">Operación para la que se va a producir SQL.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Migrations.Model.DropIndexOperation)">
+      <summary>Genera SQL para una <see cref="T:System.Data.Entity.Migrations.Model.DropIndexOperation" />.El SQL que se haya generado se debe agregar con el método Statement.</summary>
+      <param name="dropIndexOperation">Operación para la que se va a producir SQL.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Migrations.Model.DropPrimaryKeyOperation)">
+      <summary>Genera SQL para una <see cref="T:System.Data.Entity.Migrations.Model.DropPrimaryKeyOperation" />.El SQL que se haya generado se debe agregar con el método Statement.</summary>
+      <param name="dropPrimaryKeyOperation">Operación para la que se va a producir SQL.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Migrations.Model.DropProcedureOperation)">
+      <summary>Genera la operación especificada para quitar un procedimiento.</summary>
+      <param name="dropProcedureOperation">Operación para quitar un procedimiento.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Migrations.Model.DropTableOperation)">
+      <summary>Genera SQL para una <see cref="T:System.Data.Entity.Migrations.Model.DropTableOperation" />.El SQL que se haya generado se debe agregar con el método Statement.</summary>
+      <param name="dropTableOperation">Operación para la que se va a producir SQL.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Migrations.Model.HistoryOperation)">
+      <summary>Genera SQL para una <see cref="T:System.Data.Entity.Migrations.Model.HistoryOperation" />.El SQL que se haya generado se debe agregar con el método Statement.</summary>
+      <param name="historyOperation">Operación para la que se va a producir SQL.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Migrations.Model.MigrationOperation)">
+      <summary>Genera SQL para una <see cref="T:System.Data.Entity.Migrations.Model.MigrationOperation" />.Permite que proveedores derivados administren tipos de operación adicionales.El SQL que se haya generado se debe agregar con el método Statement.</summary>
+      <param name="migrationOperation">Operación para la que se va a producir SQL.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Migrations.Model.MoveProcedureOperation)">
+      <summary>Genera la operación especificada para mover un procedimiento.</summary>
+      <param name="moveProcedureOperation">Operación para mover un procedimiento.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Migrations.Model.MoveTableOperation)">
+      <summary>Genera SQL para una <see cref="T:System.Data.Entity.Migrations.Model.MoveTableOperation" />.El SQL que se haya generado se debe agregar con el método Statement.</summary>
+      <param name="moveTableOperation">Operación para la que se va a producir SQL.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Migrations.Model.RenameColumnOperation)">
+      <summary>Genera SQL para una <see cref="T:System.Data.Entity.Migrations.Model.RenameColumnOperation" />.El SQL que se haya generado se debe agregar con el método Statement.</summary>
+      <param name="renameColumnOperation">Operación para la que se va a producir SQL.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Migrations.Model.RenameProcedureOperation)">
+      <summary>Genera la operación especificada para cambiar el nombre de un procedimiento.</summary>
+      <param name="renameProcedureOperation">Operación para cambiar el nombre de un procedimiento.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Migrations.Model.RenameTableOperation)">
+      <summary>Genera SQL para una <see cref="T:System.Data.Entity.Migrations.Model.RenameTableOperation" />.El SQL que se haya generado se debe agregar con el método Statement.</summary>
+      <param name="renameTableOperation">Operación para la que se va a producir SQL.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Migrations.Model.SqlOperation)">
+      <summary>Genera SQL para una <see cref="T:System.Data.Entity.Migrations.Model.SqlOperation" />.El SQL que se haya generado se debe agregar con el método Statement.</summary>
+      <param name="sqlOperation">Operación para la que se va a producir SQL.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Migrations.Model.UpdateDatabaseOperation)">
+      <summary>Genera la operación especificada de actualización de base de datos que representa la aplicación de una serie de migraciones.El script generado es idempotente, lo que significa que contiene lógica condicional para comprobar si ya se han aplicado migraciones individuales y aplicar solo las pendientes.</summary>
+      <param name="updateDatabaseOperation">Operación de actualización de base de datos.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Spatial.DbGeography)">
+      <summary>Genera SQL para especificar un valor predeterminado de geografía constante que se va a establecer en una columna.Este método genera solamente el valor real, no el SQL para establecer el valor predeterminado.</summary>
+      <returns>SQL que representa el valor predeterminado.</returns>
+      <param name="defaultValue">Valor que hay que establecer.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Spatial.DbGeometry)">
+      <summary>Genera SQL para especificar un valor predeterminado de geometría constante que se va a establecer en una columna.Este método genera solamente el valor real, no el SQL para establecer el valor predeterminado.</summary>
+      <returns>SQL que representa el valor predeterminado.</returns>
+      <param name="defaultValue">Valor que hay que establecer.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.DateTime)">
+      <summary>Genera SQL para especificar un valor predeterminado DateTime constante que se va a establecer en una columna.Este método genera solamente el valor real, no el SQL para establecer el valor predeterminado.</summary>
+      <returns>SQL que representa el valor predeterminado.</returns>
+      <param name="defaultValue">Valor que hay que establecer.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.DateTimeOffset)">
+      <summary>Genera SQL para especificar un valor predeterminado DateTimeOffset constante que se va a establecer en una columna.Este método genera solamente el valor real, no el SQL para establecer el valor predeterminado.</summary>
+      <returns>SQL que representa el valor predeterminado.</returns>
+      <param name="defaultValue">Valor que hay que establecer.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Guid)">
+      <summary>Genera SQL para especificar un valor predeterminado Guid constante que se va a establecer en una columna.Este método genera solamente el valor real, no el SQL para establecer el valor predeterminado.</summary>
+      <returns>SQL que representa el valor predeterminado.</returns>
+      <param name="defaultValue">Valor que hay que establecer.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Object)">
+      <summary>Genera SQL para especificar un valor predeterminado constante que se va a establecer en una columna.Este método genera solamente el valor real, no el SQL para establecer el valor predeterminado.</summary>
+      <returns>SQL que representa el valor predeterminado.</returns>
+      <param name="defaultValue">Valor que hay que establecer.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.String)">
+      <summary>Genera SQL para especificar un valor predeterminado de cadena constante que se va a establecer en una columna.Este método genera solamente el valor real, no el SQL para establecer el valor predeterminado.</summary>
+      <returns>SQL que representa el valor predeterminado.</returns>
+      <param name="defaultValue">Valor que hay que establecer.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.TimeSpan)">
+      <summary>Genera SQL para especificar un valor predeterminado TimeSpan constante que se va a establecer en una columna.Este método genera solamente el valor real, no el SQL para establecer el valor predeterminado.</summary>
+      <returns>SQL que representa el valor predeterminado.</returns>
+      <param name="defaultValue">Valor que hay que establecer.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.GenerateCreateSchema(System.String)">
+      <summary>Genera SQL para crear un esquema de la base de datos.El SQL que se haya generado se debe agregar con el método Statement.</summary>
+      <param name="schema">Nombre del esquema que se va a crear.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.GenerateMakeSystemTable(System.Data.Entity.Migrations.Model.CreateTableOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+      <summary>Genera SQL para marcar una tabla como tabla del sistema.El SQL que se haya generado se debe agregar con el método Statement.</summary>
+      <param name="createTableOperation">Tabla para marcar como tabla del sistema.</param>
+      <param name="writer">
+        <see cref="T:System.Data.Entity.Migrations.Utilities.IndentedTextWriter" /> en el que se va a escribir el SQL generado.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.GenerateProcedureBody(System.Collections.Generic.ICollection{System.Data.Entity.Core.Common.CommandTrees.DbModificationCommandTree},System.String,System.String)">
+      <summary>Genera un cuerpo de SQL para un procedimiento almacenado.</summary>
+      <returns>El cuerpo de SQL para el procedimiento almacenado.</returns>
+      <param name="commandTrees">Los árboles de comandos representan comandos para una operación de inserción, actualización o borrado.</param>
+      <param name="rowsAffectedParameter">Nombre del parámetro afectado por las filas.</param>
+      <param name="providerManifestToken">Token del manifiesto del proveedor.</param>
+    </member>
+    <member name="P:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.GuidColumnDefault">
+      <summary>Devuelve el valor predeterminado de columna que se usará para las columnas GUID generadas por el almacén cuando no se especifique explícitamente ningún valor predeterminado en la migración.Devuelve newsequentialid() para SQL Server 2005 local y versiones posteriores.Devuelve newid() para SQL Azure.</summary>
+      <returns>Newsequentialid() o newid() como se ha descrito anteriormente.</returns>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Name(System.String)">
+      <summary>Genera un nombre citado.El nombre suministrado puede incluir o no el esquema.</summary>
+      <returns>Nombre citado.</returns>
+      <param name="name">Nombre que se va a citar.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Quote(System.String)">
+      <summary>Cita un identificador para SQL Server.</summary>
+      <returns>Identificador citado.</returns>
+      <param name="identifier">Identificador que se cita.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Statement(System.Data.Entity.Migrations.Utilities.IndentedTextWriter,System.String)">
+      <summary>Agrega una instrucción nueva que se va a ejecutar frente a la base de datos.</summary>
+      <param name="writer">Escritor que contiene el SQL que se va a ejecutar.</param>
+      <param name="batchTerminator">El terminador de lote del proveedor de base de datos.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Statement(System.String,System.Boolean,System.String)">
+      <summary>Agrega una instrucción nueva que se va a ejecutar frente a la base de datos.</summary>
+      <param name="sql">Instrucción que se va a ejecutar.</param>
+      <param name="suppressTransaction">Obtiene o establece un valor que indica si esta instrucción debe realizarse fuera del ámbito de la transacción que se usa para llevar a cabo el proceso de migración entre transacciones.Si se establece en true, esta operación no se revertirá si se produce un error en el proceso de migración.</param>
+      <param name="batchTerminator">El terminador de lote del proveedor de base de datos.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Writer">
+      <summary>Obtiene un nuevo <see cref="T:System.Data.Entity.Migrations.Utilities.IndentedTextWriter" /> que se puede usar para generar SQL.Se trata simplemente de un método auxiliar para crear un escritor.Al escribir en el sistema de escritura, SQL no se registrará para su ejecución.Es preciso que pase el SQL generado al método Statement.</summary>
+      <returns>Escritor de texto vacío que se va a usar para la generación de SQL.</returns>
+    </member>
+    <member name="T:System.Data.Entity.SqlServer.SqlSpatialFunctions">
+      <summary>Contiene códigos auxiliares de funciones que exponen métodos de SQL Server en consultas Linq to Entities.</summary>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlSpatialFunctions.AsTextZM(System.Data.Entity.Spatial.DbGeography)">
+      <summary>Devuelve la representación del bien conocido texto (WKT) del Consorcio Geoespacial Abierto (OGC) de una instancia de geografía aumentada con cualesquiera valores Z (elevación) y M (medida) que contenga la instancia.</summary>
+      <returns>Representación del bien conocido texto (WKT) del Consorcio Geoespacial Abierto (OGC) de una instancia de geografía.</returns>
+      <param name="geographyValue">Valor de geografía.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlSpatialFunctions.AsTextZM(System.Data.Entity.Spatial.DbGeometry)">
+      <summary>Devuelve la representación del bien conocido texto (WKT) del Consorcio Geoespacial Abierto (OGC) de una instancia geográfica aumentada con cualesquiera valores Z (elevación) y M (medida) que contenga la instancia.</summary>
+      <returns>Representación del bien conocido texto (WKT) del Consorcio Geoespacial Abierto (OGC) de una instancia de geometría.</returns>
+      <param name="geometryValue">Valor de geometría.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlSpatialFunctions.BufferWithTolerance(System.Data.Entity.Spatial.DbGeography,System.Nullable{System.Double},System.Nullable{System.Double},System.Nullable{System.Boolean})">
+      <summary>Devuelve un objeto geométrico que representa la unión de todos los valores de puntos cuya distancia respecto a una instancia de geografía es menor o igual a un valor especificado, permitiendo una tolerancia especificada.</summary>
+      <returns>Unión de todos los valores de puntos cuya distancia respecto a una instancia de geografía es menor o igual a un valor especificado</returns>
+      <param name="geographyValue">Valor de geografía.</param>
+      <param name="distance">Distancia.</param>
+      <param name="tolerance">Tolerancia especificada.</param>
+      <param name="relative">Especificando si el valor de tolerancia es relativo o absoluto.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlSpatialFunctions.BufferWithTolerance(System.Data.Entity.Spatial.DbGeometry,System.Nullable{System.Double},System.Nullable{System.Double},System.Nullable{System.Boolean})">
+      <summary>Devuelve un objeto geométrico que representa la unión de todos los valores de puntos cuya distancia de geometría respecto a una instancia de geografía es inferior o igual a un valor especificado, permitiendo una tolerancia especificada.</summary>
+      <returns>Unión de todos los valores de puntos cuya distancia respecto a una instancia de geometría es menor o igual a un valor especificado</returns>
+      <param name="geometryValue">Valor de geometría.</param>
+      <param name="distance">Distancia.</param>
+      <param name="tolerance">Tolerancia especificada.</param>
+      <param name="relative">Especificando si el valor de tolerancia es relativo o absoluto.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlSpatialFunctions.EnvelopeAngle(System.Data.Entity.Spatial.DbGeography)">
+      <summary>Devuelve el ángulo máximo entre el punto devuelto por el EnvelopeCenter() y un punto en la instancia de geografía en grados.</summary>
+      <returns>Ángulo máximo entre el punto devuelto por EnvelopeCenter().</returns>
+      <param name="geographyValue">Valor de geografía.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlSpatialFunctions.EnvelopeCenter(System.Data.Entity.Spatial.DbGeography)">
+      <summary>Devuelve un punto que puede utilizarse como el centro de un círculo delimitador para la instancia de geografía.</summary>
+      <returns>Un valor SqlGeography que especifica la ubicación del centro de un círculo delimitador.</returns>
+      <param name="geographyValue">Valor de geografía.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlSpatialFunctions.Filter(System.Data.Entity.Spatial.DbGeography,System.Data.Entity.Spatial.DbGeography)">
+      <summary>Ofrece un método rápido de intersección por índice únicamente para determinar si una instancia de geografía se cruza con otra instancia SqlGeography, asumiendo que hay un índice disponible.</summary>
+      <returns>True si una instancia de geografía se cruza potencialmente con otra instancia SqlGeography; de lo contrario, false.</returns>
+      <param name="geographyValue">Valor de geografía.</param>
+      <param name="geographyOther">Otra instancia de geografía para comparar contra la instancia en la que se invoca un filtro.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlSpatialFunctions.Filter(System.Data.Entity.Spatial.DbGeometry,System.Data.Entity.Spatial.DbGeometry)">
+      <summary>Ofrece un método rápido de intersección por índice únicamente para determinar si una instancia de geografía se cruza con otra instancia SqlGeometry, asumiendo que hay un índice disponible.</summary>
+      <returns>True si una instancia de geografía se cruza potencialmente con otra instancia SqlGeography; de lo contrario, false.</returns>
+      <param name="geometryValue">Valor de geometría.</param>
+      <param name="geometryOther">Otra instancia de geografía para comparar contra la instancia en la que se invoca un filtro.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlSpatialFunctions.InstanceOf(System.Data.Entity.Spatial.DbGeography,System.String)">
+      <summary>Comprueba si la instancia SqlGeography es la misma que la del tipo especificado.</summary>
+      <returns>Una cadena que especifica uno de los 12 tipos expuestos en la jerarquía del tipo de geografía.</returns>
+      <param name="geographyValue">Valor de geografía.</param>
+      <param name="geometryTypeName">Una cadena que especifica uno de los 12 tipos expuestos en la jerarquía del tipo de geografía.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlSpatialFunctions.InstanceOf(System.Data.Entity.Spatial.DbGeometry,System.String)">
+      <summary>Comprueba si la instancia SqlGeometry es la misma que la del tipo especificado.</summary>
+      <returns>Una cadena que especifica uno de los 12 tipos expuestos en la jerarquía del tipo de geografía.</returns>
+      <param name="geometryValue">Valor de geometría.</param>
+      <param name="geometryTypeName">Una cadena que especifica uno de los 12 tipos expuestos en la jerarquía del tipo de geografía.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlSpatialFunctions.MakeValid(System.Data.Entity.Spatial.DbGeometry)">
+      <summary>Convierte una instancia de geometría inválida en una instancia de geometría con un tipo de Consorcio Geoespacial Abierto (OGC) válido.</summary>
+      <returns>Instancia de geometría convertida.</returns>
+      <param name="geometryValue">Valor de geometría.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlSpatialFunctions.NumRings(System.Data.Entity.Spatial.DbGeography)">
+      <summary>Devuelve el número total de anillos de una instancia de polígono.</summary>
+      <returns>Número total de anillos.</returns>
+      <param name="geographyValue">Valor de geografía.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlSpatialFunctions.PointGeography(System.Nullable{System.Double},System.Nullable{System.Double},System.Nullable{System.Int32})">
+      <summary>Construye una instancia de geografía que representa una instancia de punto desde sus valores de x e y un identificador de referencia espacial (SRID).</summary>
+      <returns>Instancia de geografía construida.</returns>
+      <param name="latitude">Coordenada x del punto que se está generando.</param>
+      <param name="longitude">Coordenada y del punto que se está generando</param>
+      <param name="spatialReferenceId">SRID de la instancia de geografía.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlSpatialFunctions.PointGeometry(System.Nullable{System.Double},System.Nullable{System.Double},System.Nullable{System.Int32})">
+      <summary>Construye una instancia de geometría que representa una instancia de puntos desde sus valores de x e y un identificador de referencia espacial (SRID).</summary>
+      <returns>Instancia de geometría construida.</returns>
+      <param name="xCoordinate">Coordenada x del punto que se está generando.</param>
+      <param name="yCoordinate">Coordenada y del punto que se está generando</param>
+      <param name="spatialReferenceId">SRID de la instancia de geografía.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlSpatialFunctions.Reduce(System.Data.Entity.Spatial.DbGeography,System.Nullable{System.Double})">
+      <summary>Devuelve una aproximación de la instancia de geografía especificada generada al ejecutar el algoritmo de Douglas-Peucker en la instancia con la tolerancia especificada.</summary>
+      <returns>Devuelve <see cref="T:System.Data.Entity.Spatial.DbGeography" />.</returns>
+      <param name="geographyValue">Valor de geografía.</param>
+      <param name="tolerance">Tolerancia a introducir en el algoritmo de Douglas-Peucker.La tolerancia debe ser un número positivo.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlSpatialFunctions.Reduce(System.Data.Entity.Spatial.DbGeometry,System.Nullable{System.Double})">
+      <summary>Devuelve una aproximación de la instancia de geografía especificada generada al ejecutar el algoritmo de Douglas-Peucker en la instancia con la tolerancia especificada.</summary>
+      <returns>Devuelve <see cref="T:System.Data.Entity.Spatial.DbGeometry" />.</returns>
+      <param name="geometryValue">Valor de geometría.</param>
+      <param name="tolerance">Tolerancia a introducir en el algoritmo de Douglas-Peucker.La tolerancia debe ser un número positivo.</param>
+    </member>
+    <member name="M:System.Data.Entity.SqlServer.SqlSpatialFunctions.RingN(System.Data.Entity.Spatial.DbGeography,System.Nullable{System.Int32})">
+      <summary>Devuelve el anillo especificado de la instancia SqlGeography: 1 ≤ n ≤ NumRings().</summary>
+      <returns>Un objeto SqlGeography que representa el anillo especificado por n.</returns>
+      <param name="geographyValue">Valor de geografía.</param>
+      <param name="index">Una expresión de instancia entre 1 y el número de anillos de una instancia de polígono.</param>
+    </member>
+  </members>
+</doc>

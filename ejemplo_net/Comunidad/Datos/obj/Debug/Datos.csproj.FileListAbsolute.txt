@@ -1,0 +1,12 @@
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Datos\bin\Debug\Datos.dll.config
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Datos\bin\Debug\Datos.dll
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Datos\bin\Debug\Datos.pdb
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Datos\bin\Debug\EntityFramework.dll
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Datos\bin\Debug\EntityFramework.xml
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Datos\obj\Debug\Datos.dll
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Datos\obj\Debug\Datos.pdb
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Datos\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Datos\bin\Debug\es\EntityFramework.SqlServer.resources.dll

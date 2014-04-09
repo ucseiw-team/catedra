@@ -1,0 +1,26 @@
+@model Comunidad.Models.User
+
+@{
+    ViewBag.Title = "Detalles de usuario";
+}
+
+<h2>Detalles</h2>
+
+<fieldset>
+    <legend>Usuario</legend>
+
+    <div class="display-label">Nombre</div>
+    <div class="display-field">@Model.Name</div>
+
+    <div class="display-label">Correo electrónico</div>
+    <div class="display-field">@Model.Email</div>
+
+    <div class="display-label">Password</div>
+    <div class="display-field">@Model.Password</div>
+</fieldset>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Volver al listado", "Index")
+</p>
+
+
