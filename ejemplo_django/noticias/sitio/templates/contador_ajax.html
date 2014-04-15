@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block js_extra %}
+  <script type="text/javascript" src="{{ STATIC_URL }}contador_ajax.js"></script>
+{% endblock %}
+
+{% block contenido %}
+  <p id='contador'>0</p>
+  <p id='contador_json'>0</p>
+{% endblock %}
