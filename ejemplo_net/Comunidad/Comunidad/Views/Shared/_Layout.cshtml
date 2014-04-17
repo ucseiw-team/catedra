@@ -8,6 +8,8 @@
         <meta name="viewport" content="width=device-width" />
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
+        <script type="text/javascript" src="~/Scripts/jquery-1.8.2.js"></script>
+        <script type="text/javascript" src="~/Scripts/General.js"></script>
     </head>
     <body>
         <header>
@@ -38,13 +40,18 @@
         </div>
         <footer>
             <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET MVC</p>
+                <div class="float-left" id="datetime">
+                    <p>La hora actual es @DateTime.Now.TimeOfDay.Hours:@DateTime.Now.TimeOfDay.Minutes:@DateTime.Now.TimeOfDay.Seconds</p>
+                    <p>Hoy es @DateTime.Now.ToShortDateString()</p>
                 </div>
+            </div>
+            <div class="float-right">
+                <input type="button" value="Actualizar tiempo" id="updateTime" />
             </div>
         </footer>
 
         @Scripts.Render("~/bundles/jquery")
         @RenderSection("scripts", required: false)
+
     </body>
 </html>

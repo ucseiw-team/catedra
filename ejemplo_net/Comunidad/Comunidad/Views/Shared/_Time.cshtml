@@ -1,0 +1,7 @@
+﻿@model Comunidad.Models.Hora
+
+<p>La hora actual es @DateTime.Now.TimeOfDay.Hours:@DateTime.Now.TimeOfDay.Minutes:@DateTime.Now.TimeOfDay.Seconds</p>
+@if(Model.Completo) 
+{
+    <p>Hoy es @Model.Fecha.ToShortDateString()</p>
+}

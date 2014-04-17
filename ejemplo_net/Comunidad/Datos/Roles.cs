@@ -12,11 +12,16 @@ namespace Datos
     using System;
     using System.Collections.Generic;
     
-    public partial class Journeys
+    public partial class Roles
     {
-        public int JourneyId { get; set; }
-        public string Key { get; set; }
-        public string URI { get; set; }
-        public int LifeTime { get; set; }
+        public Roles()
+        {
+            this.Users = new HashSet<Users>();
+        }
+    
+        public int Id { get; set; }
+        public string Descripcion { get; set; }
+    
+        public virtual ICollection<Users> Users { get; set; }
     }
 }
