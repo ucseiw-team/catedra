@@ -18,8 +18,9 @@ namespace Datos
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+        public int IdRol { get; set; }
         public Nullable<System.DateTime> DeleteDate { get; set; }
-        public string SecretQuestion { get; set; }
-        public Nullable<int> IdRol { get; set; }
+    
+        public virtual Roles Roles { get; set; }
     }
 }

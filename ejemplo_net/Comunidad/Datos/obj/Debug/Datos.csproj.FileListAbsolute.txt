@@ -10,3 +10,15 @@ C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Datos\obj\Debug\Datos.dll
 C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Datos\obj\Debug\Datos.pdb
 C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Datos\bin\Debug\es\EntityFramework.resources.dll
 C:\Users\Mariano Ferrero\Desktop\EjemploApp\Comunidad\Datos\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+D:\Facultad\SEIA\ejemplo_net\Comunidad\Datos\bin\Debug\Datos.dll.config
+D:\Facultad\SEIA\ejemplo_net\Comunidad\Datos\bin\Debug\Datos.dll
+D:\Facultad\SEIA\ejemplo_net\Comunidad\Datos\bin\Debug\Datos.pdb
+D:\Facultad\SEIA\ejemplo_net\Comunidad\Datos\bin\Debug\EntityFramework.dll
+D:\Facultad\SEIA\ejemplo_net\Comunidad\Datos\bin\Debug\EntityFramework.SqlServer.dll
+D:\Facultad\SEIA\ejemplo_net\Comunidad\Datos\bin\Debug\EntityFramework.xml
+D:\Facultad\SEIA\ejemplo_net\Comunidad\Datos\bin\Debug\EntityFramework.SqlServer.xml
+D:\Facultad\SEIA\ejemplo_net\Comunidad\Datos\bin\Debug\es\EntityFramework.resources.dll
+D:\Facultad\SEIA\ejemplo_net\Comunidad\Datos\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+D:\Facultad\SEIA\ejemplo_net\Comunidad\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+D:\Facultad\SEIA\ejemplo_net\Comunidad\Datos\obj\Debug\Datos.dll
+D:\Facultad\SEIA\ejemplo_net\Comunidad\Datos\obj\Debug\Datos.pdb

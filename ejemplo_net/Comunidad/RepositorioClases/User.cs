@@ -16,5 +16,7 @@ namespace RepositorioClases
         public string Password { get; set; }
 
         public DateTime DeletedDate { get; set; }
+
+        public int IdRol { get; set; }
     }
 }
