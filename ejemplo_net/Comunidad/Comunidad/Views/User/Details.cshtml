@@ -17,6 +17,9 @@
 
     <div class="display-label">Password</div>
     <div class="display-field">@Model.Password</div>
+
+    <div class="display-label">Rol</div>
+    <div class="display-field">@Model.Roles.Where(r => r.Id == Model.IdRol).FirstOrDefault().Description</div>
 </fieldset>
 <p>
     @Html.ActionLink("Editar", "Edit", new { id=Model.Id }) |

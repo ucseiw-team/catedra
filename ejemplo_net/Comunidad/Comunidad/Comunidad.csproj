@@ -197,6 +197,7 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\ComunidadContext.cs" />
+    <Compile Include="Models\Hora.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -258,6 +259,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\General.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -317,6 +319,7 @@
     <Content Include="Views\User\Details.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\User\_CreateOrEdit.cshtml" />
+    <Content Include="Views\Shared\_Time.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

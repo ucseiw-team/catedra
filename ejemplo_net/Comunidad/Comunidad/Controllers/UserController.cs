@@ -9,7 +9,7 @@ using Comunidad.Models;
 using Servicios;
 
 namespace Comunidad.Controllers
-{   
+{
     public class UserController : Controller
     {
         private ComunidadContext context = new ComunidadContext();
@@ -37,11 +37,13 @@ namespace Comunidad.Controllers
             //    usuariosModels.Add(usuario);
             //}           
 
-            return View(UserService.Get(null).Select(u => new User() {
+            return View(UserService.Get(null).Select(u => new User()
+            {
                 Email = u.Email,
                 Id = u.Id,
                 Name = u.Name,
-                Password = u.Password
+                Password = u.Password,
+                IdRol = u.IdRol
             }).ToList());
         }
 
@@ -55,7 +57,8 @@ namespace Comunidad.Controllers
                 Email = u.Email,
                 Id = u.Id,
                 Name = u.Name,
-                Password = u.Password
+                Password = u.Password,
+                IdRol = u.IdRol
             }).FirstOrDefault();
 
             return View(user);
@@ -66,8 +69,8 @@ namespace Comunidad.Controllers
 
         public ActionResult Create()
         {
-            return View();
-        } 
+            return View(new User());
+        }
 
         //
         // POST: /User/Create
@@ -81,17 +84,18 @@ namespace Comunidad.Controllers
                 {
                     Email = user.Email,
                     Name = user.Name,
-                    Password = user.Password
+                    Password = user.Password,
+                    IdRol = user.IdRol
                 });
-                return RedirectToAction("Index");  
+                return RedirectToAction("Index");
             }
 
             return View(user);
         }
-        
+
         //
         // GET: /User/Edit/5
- 
+
         public ActionResult Edit(int id)
         {
             User user = UserService.Get(id).Select(u => new User()
@@ -99,7 +103,8 @@ namespace Comunidad.Controllers
                 Email = u.Email,
                 Id = u.Id,
                 Name = u.Name,
-                Password = u.Password
+                Password = u.Password,
+                IdRol = u.IdRol
             }).FirstOrDefault();
 
             return View(user);
@@ -118,9 +123,10 @@ namespace Comunidad.Controllers
                     Email = user.Email,
                     Id = user.Id,
                     Name = user.Name,
-                    Password = user.Password
+                    Password = user.Password,
+                    IdRol = user.IdRol
                 });
-                
+
                 return RedirectToAction("Index");
             }
             return View(user);
@@ -128,7 +134,7 @@ namespace Comunidad.Controllers
 
         //
         // GET: /User/Delete/5
- 
+
         public ActionResult Delete(int id)
         {
             User user = UserService.Get(id).Select(u => new User()
@@ -136,7 +142,8 @@ namespace Comunidad.Controllers
                 Email = u.Email,
                 Id = u.Id,
                 Name = u.Name,
-                Password = u.Password
+                Password = u.Password,
+                IdRol = u.IdRol
             }).FirstOrDefault();
 
             return View(user);

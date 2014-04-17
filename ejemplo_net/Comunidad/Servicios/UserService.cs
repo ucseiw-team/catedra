@@ -77,5 +77,21 @@ namespace Servicios
                 context.SaveChanges();
             }
         }
+
+        public static List<Rol> GetRole(int? id)
+        {
+            using (Entities context = new Entities())
+            {
+                // la propiedad HasValue de los objetos que son Nullables o permiten tomar valores nulos, equivale a hacer la pregunta if (valor != null)
+                // la expresión id.HasValue ? id.Value == u.Id : true
+                // equivale a (id.HasValue && id.Value == u.Id) || (!id.HasValue)
+                // lo que hacen es filtrar solo cuando viene un valor en la variable, ahorrándonos hacer un if antes y repetir la consulta.
+                return context.Roles.Where(r => id.HasValue ? id.Value == r.Id : true).Select(r => new Rol()
+                {
+                    Description = r.Descripcion,
+                    Id = r.Id
+                }).ToList();
+            }
+        }
     }
 }

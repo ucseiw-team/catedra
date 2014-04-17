@@ -63,22 +63,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Entities.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Journeys.cs">
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Roles.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Users.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
     <EntityDeploy Include="Entities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Entities.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
     <None Include="Entities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Entities.edmx</DependentUpon>

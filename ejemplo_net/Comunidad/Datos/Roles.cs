@@ -12,15 +12,16 @@ namespace Datos
     using System;
     using System.Collections.Generic;
     
-    public partial class Users
+    public partial class Roles
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public int IdRol { get; set; }
-        public Nullable<System.DateTime> DeleteDate { get; set; }
+        public Roles()
+        {
+            this.Users = new HashSet<Users>();
+        }
     
-        public virtual Roles Roles { get; set; }
+        public int Id { get; set; }
+        public string Descripcion { get; set; }
+    
+        public virtual ICollection<Users> Users { get; set; }
     }
 }

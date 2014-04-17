@@ -25,7 +25,7 @@ namespace Datos
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Journeys> Journeys { get; set; }
+        public virtual DbSet<Roles> Roles { get; set; }
         public virtual DbSet<Users> Users { get; set; }
     }
 }
