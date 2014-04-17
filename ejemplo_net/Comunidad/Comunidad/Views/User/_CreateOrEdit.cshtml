@@ -25,4 +25,8 @@
     @Html.EditorFor(model => model.Password)
     @Html.ValidationMessageFor(model => model.Password)
 </div>
+<div class="editor-field">
+    @Html.LabelFor(model => model.IdRol)
+    @Html.DropDownListFor(model => model.IdRol, new SelectList(Model.Roles, "Id", "Description"), "Selecciona un rol", new { @class = "form-control" })
+</div>
 

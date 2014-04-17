@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Comunidad.Models;
 
 namespace Comunidad.Controllers
 {
@@ -27,6 +28,11 @@ namespace Comunidad.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        public ActionResult GiveMeDate(bool complete)
+        {
+            return PartialView("_Time", new Hora() { Completo = complete, Fecha = DateTime.Now });
         }
     }
 }
