@@ -7,6 +7,7 @@ class Categoria(models.Model):
     def __unicode__(self):
         return self.nombre
 
+
 class Noticia(models.Model):
     titulo = models.CharField(max_length=50)
     texto = models.TextField()
