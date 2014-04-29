@@ -1,8 +1,9 @@
 # coding: utf-8
 from datetime import datetime
 from django.shortcuts import render
-from sitio.models import Noticia
+from sitio.models import Noticia, Categoria
 from django.http import HttpResponse
+from api import crear_policial
 
 import json
 
@@ -49,3 +50,8 @@ def sumar_numero_json(request, numero):
     datos = {'numero': numero,
              'texto': 'hola mundo'}
     return HttpResponse(json.dumps(datos))
+
+
+def crear_noticia_policial(request):
+    nueva = crear_policial()
+    return render(request, 'crear_noticia_policial.html', {'noticia': nueva})
