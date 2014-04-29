@@ -36,6 +36,9 @@ class TestCrearPolicial(TestCase):
         self.assertIn(nueva.texto, response.content)
 
     def test_la_vista_tiene_que_usar_la_api(self):
-        with mock.patch('sitio.api.crear_policial') as mock_api_crear:
+        from sitio.views import crear_policial as crear_policial_de_views
+        self.assertEquals(crear_policial, crear_policial_de_views)
+
+        with mock.patch('sitio.views.crear_policial') as mock_api_crear:
             self.client.get(reverse('crear_policial'))
             self.assertTrue(mock_api_crear.called)
