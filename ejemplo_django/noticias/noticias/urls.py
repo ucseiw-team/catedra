@@ -17,6 +17,8 @@ urlpatterns = patterns('',
     url(r'^sumar_numero/(\d+)/$', 'sitio.views.sumar_numero', name='sumar_numero'),
     url(r'^sumar_numero_json/(\d+)/$', 'sitio.views.sumar_numero_json', name='sumar_numero_json'),
 
+    url(r'^crear_policial/$', 'sitio.views.crear_noticia_policial', name='crear_policial'),
+
     url(r'^jsreverse/$', 'django_js_reverse.views.urls_js', name='js_reverse'),
 
     url(r'^admin/', include(admin.site.urls)),

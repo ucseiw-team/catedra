@@ -1,3 +1,4 @@
 django
 django-js-reverse
 django-haystack
+mock
