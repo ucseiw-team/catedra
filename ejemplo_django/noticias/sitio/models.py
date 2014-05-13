@@ -12,7 +12,7 @@ class Noticia(models.Model):
     titulo = models.CharField(max_length=50)
     texto = models.TextField()
     archivada = models.BooleanField(default=False)
-    fecha = models.DateTimeField()
+    fecha = models.DateTimeField(auto_now_add=True)
     categoria = models.ForeignKey(Categoria, blank=True, null=True)
 
     def __unicode__(self):
