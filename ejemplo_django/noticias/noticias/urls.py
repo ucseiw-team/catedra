@@ -19,6 +19,8 @@ urlpatterns = patterns('',
 
     url(r'^crear_policial/$', 'sitio.views.crear_noticia_policial', name='crear_policial'),
 
+    url(r'^crear_noticia_con_datos/$', 'sitio.views.crear_noticia_con_datos', name='sitio.views.crear_noticia_con_datos'),
+
     url(r'^jsreverse/$', 'django_js_reverse.views.urls_js', name='js_reverse'),
 
     url(r'^admin/', include(admin.site.urls)),

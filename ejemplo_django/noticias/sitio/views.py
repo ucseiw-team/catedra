@@ -2,8 +2,9 @@
 from datetime import datetime
 from django.shortcuts import render
 from sitio.models import Noticia, Categoria
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from api import crear_policial
+from forms import FormNoticia
 
 import json
 
@@ -55,3 +56,21 @@ def sumar_numero_json(request, numero):
 def crear_noticia_policial(request):
     nueva = crear_policial()
     return render(request, 'crear_noticia_policial.html', {'noticia': nueva})
+
+
+def crear_noticia_con_datos(request):
+    if request.method == 'GET':
+        # me estan pidiendo la pagina vacia
+        # para escribir los datos
+        form = FormNoticia()
+    else:
+        # me estan mandando los datos que
+        # tengo que guardar
+        form = FormNoticia(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/inicio/')
+
+    return render(request,
+                  'crear_noticia_con_datos.html',
+                  {'form_noticia': form})
