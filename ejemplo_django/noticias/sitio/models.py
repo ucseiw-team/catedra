@@ -10,6 +10,7 @@ class Categoria(models.Model):
 
 class Noticia(models.Model):
     titulo = models.CharField(max_length=50)
+    copete = models.CharField(max_length=255, default='')
     texto = models.TextField()
     archivada = models.BooleanField(default=False)
     fecha = models.DateTimeField(auto_now_add=True)
