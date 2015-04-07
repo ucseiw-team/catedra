@@ -1,9 +1,15 @@
-<h1>Noticias.com</h1>
-<p>bienvenido!</p>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ STATIC_URL }}inicio.css" />
+</head>
 
-{% for noticia in lista_noticias %}
-    <h3>{{ noticia.fecha }} {{ noticia.titulo }}</h3>
-    <p>{{ noticia.texto }}</p>
-{% endfor %}
+<body>
+    <h1>Noticias.com</h1>
+    <p>bienvenido!</p>
 
+    {% for noticia in lista_noticias %}
+        <h3>{{ noticia.fecha }} {{ noticia.titulo }}</h3>
+        <p>{{ noticia.texto }}</p>
+    {% endfor %}
+</body>
 
