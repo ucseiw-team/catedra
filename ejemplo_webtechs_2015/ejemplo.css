@@ -1,0 +1,28 @@
+/* por tipo de elemento */
+h1 {
+    color: #FF0055;
+}
+
+/* por id de elemento */
+#menu-superior {
+    background-color: #777777;
+    font-family: Arial;
+    position: fixed;
+    top: 10px;
+}
+
+/* por tipo de elemento y clase */
+ul.lista-horizontal {
+    list-style: none;
+}
+
+/* por cosa andentro de otra */
+#menu-superior ul li  {
+    color: #00FF00;
+}
+
+/* a varias cosas a la vez */
+p, a {
+    font-family: sans-serif;
+}
+
