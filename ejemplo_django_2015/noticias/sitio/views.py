@@ -11,8 +11,6 @@ def inicio(request):
     nueva.fecha = datetime.now()
     nueva.save()
 
-    a = 1/0
-
     noticias = Noticia.objects.all()
     return render(request, 'inicio.html', {'lista_noticias': noticias})
 
