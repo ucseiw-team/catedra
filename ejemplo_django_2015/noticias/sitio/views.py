@@ -15,3 +15,6 @@ def inicio(request):
     return render(request, 'inicio.html', {'lista_noticias': noticias})
 
 
+def novedades(request):
+    novedad = "Hay muchos crimenes"
+    return render(request, 'novedades.html', {'novedad': novedad})

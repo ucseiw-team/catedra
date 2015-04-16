@@ -1,15 +1,12 @@
-<html>
-<head>
-    <link rel="stylesheet" href="{{ STATIC_URL }}inicio.css" />
-</head>
+{% extends 'base.html' %}
 
-<body>
-    <h1>Noticias.com</h1>
-    <p>bienvenido!</p>
+{% block subtitulo %}bienvenido!{% endblock %}
+
+{% block contenido %}
+    {% include 'publicidad.html' %}
 
     {% for noticia in lista_noticias %}
         <h3>{{ noticia.fecha }} {{ noticia.titulo }}</h3>
         <p>{{ noticia.texto }}</p>
     {% endfor %}
-</body>
-
+{% endblock %}
