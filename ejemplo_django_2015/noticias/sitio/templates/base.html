@@ -1,0 +1,19 @@
+<html>
+<head>
+    <link rel="stylesheet" href="{{ STATIC_URL }}inicio.css" />
+</head>
+
+<body>
+    <h1>Noticias.com</h1>
+    <p>{% block subtitulo %}el mejor sitio de noticias{% endblock %}</p>
+
+    <div>
+        {% block contenido %}
+        {% endblock %}
+    </div>
+
+    <div id="pie-de-pagina">
+        <p>gracias por leernos</p>
+    </div>
+</body>
+</html>

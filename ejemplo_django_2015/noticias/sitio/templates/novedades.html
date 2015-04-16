@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+    <p>Acá hay novedades:</p>
+
+    <p>{{ novedad | upper }}</p>
+
+    {% include 'publicidad.html' %}
+{% endblock %}
