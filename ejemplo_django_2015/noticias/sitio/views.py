@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import JsonResponse
 
 from sitio.models import Noticia
 from datetime import datetime
@@ -18,3 +19,12 @@ def inicio(request):
 def novedades(request):
     novedad = "Hay muchos crimenes"
     return render(request, 'novedades.html', {'novedad': novedad})
+
+
+def contador_ajax(request):
+    return JsonResponse({'contador': Noticia.objects.count()})
+
+
+def titulos_noticias(request):
+    noticias = Noticia.objects.all()
+    return render(request, 'titulos_noticias.html', {'noticias': noticias})

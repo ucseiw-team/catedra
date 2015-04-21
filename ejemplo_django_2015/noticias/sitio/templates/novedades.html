@@ -1,9 +1,25 @@
 {% extends 'base.html' %}
 
+{% block heads_extras %}
+    <script src="{{ STATIC_URL }}novedades.js"></script>
+{% endblock %}
+
 {% block contenido %}
     <p>Acá hay novedades:</p>
 
     <p>{{ novedad | upper }}</p>
 
+    <p>
+        Cantidad de noticias: <span id="contador_noticias">0</span>
+    </p>
+
+    <div id="titulos_noticias">
+    </div>
+
     {% include 'publicidad.html' %}
+
+    <script>
+        var urlAjaxContador = "{% url 'contador_ajax' %}";
+        var urlAjaxTitulos = "{% url 'titulos_noticias' %}";
+    </script>
 {% endblock %}
