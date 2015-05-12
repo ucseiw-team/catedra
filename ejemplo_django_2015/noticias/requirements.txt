@@ -1,0 +1,4 @@
+django
+django-haystack
+django-toolbelt
+elasticsearch
