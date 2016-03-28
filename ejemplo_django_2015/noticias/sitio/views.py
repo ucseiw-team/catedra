@@ -13,12 +13,12 @@ def inicio(request):
     nueva.save()
 
     noticias = Noticia.objects.all()
-    return render(request, 'inicio.html', {'lista_noticias': noticias})
+    return render(request, 'sitio/inicio.html', {'lista_noticias': noticias})
 
 
 def novedades(request):
     novedad = "Hay muchos crimenes"
-    return render(request, 'novedades.html', {'novedad': novedad})
+    return render(request, 'sitio/novedades.html', {'novedad': novedad})
 
 
 def contador_ajax(request):
@@ -27,4 +27,4 @@ def contador_ajax(request):
 
 def titulos_noticias(request):
     noticias = Noticia.objects.all()
-    return render(request, 'titulos_noticias.html', {'noticias': noticias})
+    return render(request, 'sitio/titulos_noticias.html', {'noticias': noticias})
