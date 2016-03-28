@@ -14,6 +14,8 @@ urlpatterns = patterns('',
     url(r'^titulos_noticias/$', 'sitio.views.titulos_noticias',
         name='titulos_noticias'),
 
+    url(r'^accounts/', include('allauth.urls')),
+
     url(r'^search/', include('haystack.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )
