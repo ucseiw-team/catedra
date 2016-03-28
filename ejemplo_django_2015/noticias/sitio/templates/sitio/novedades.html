@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'sitio/base.html' %}
 
 {% block heads_extras %}
     <script src="{{ STATIC_URL }}novedades.js"></script>
@@ -16,7 +16,7 @@
     <div id="titulos_noticias">
     </div>
 
-    {% include 'publicidad.html' %}
+    {% include 'sitio/publicidad.html' %}
 
     <script>
         var urlAjaxContador = "{% url 'contador_ajax' %}";

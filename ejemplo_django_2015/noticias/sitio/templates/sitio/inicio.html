@@ -1,9 +1,9 @@
-{% extends 'base.html' %}
+{% extends 'sitio/base.html' %}
 
 {% block subtitulo %}bienvenido!{% endblock %}
 
 {% block contenido %}
-    {% include 'publicidad.html' %}
+    {% include 'sitio/publicidad.html' %}
 
     {% for noticia in lista_noticias %}
         <h3>{{ noticia.fecha }} {{ noticia.titulo }}</h3>
