@@ -1,0 +1,11 @@
+<p>Rellene su peticion de espada:</p>
+
+<form method="POST">
+    {% csrf_token %}
+
+    {{ form_noticia.as_p }}
+
+    <p> 
+        <input type="submit" value="Comprarrrrrr!" />
+    </p>
+</form>
