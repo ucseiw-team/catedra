@@ -1,0 +1,22 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    {% block extra_js %}
+    {% endblock %}
+</head>
+
+<body>
+    <h1 id="titulo">{% block titulo %}Titulo{% endblock %}</h1>
+
+    <div id="contenido">
+        {% block contenido %}
+            <p>Contenido</p> 
+        {% endblock %}
+    </div>
+
+    <div id="footer">
+        <p>Gracias por visitarnos</p> 
+        <p>Hecho en Django</p> 
+    </div>
+</body>
+</html>
