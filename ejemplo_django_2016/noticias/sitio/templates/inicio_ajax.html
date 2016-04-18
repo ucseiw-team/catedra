@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block extra_js %}
+    <script src="{% static 'js/inicio_ajax.js' %}"></script>
+{% endblock %}
+
+{% block titulo %}Ultimas noticias AHORA EN VIVO!{% endblock %}
+
+{% block contenido %}
+    <p>bienvenido! hay <span id="contador-noticias">0</span> noticias</p>
+
+    <div id="lista-noticias">
+        <p>CHAAAAARGE!</p>
+        <img src="{% static 'imgs/vanguard.png' %}"></img>
+    </div>
+
+    {% include 'publicidad.html' %}
+{% endblock %}
+

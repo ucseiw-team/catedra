@@ -18,6 +18,9 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^inicio/$', 'sitio.views.inicio'),
+    url(r'^inicio_ajax/$', 'sitio.views.inicio_ajax'),
+    url(r'^lista_noticias_ajax/$', 'sitio.views.lista_noticias_ajax', name="lista_noticias_ajax"),
+    url(r'^contador_noticias_ajax/$', 'sitio.views.contador_noticias_ajax', name="contador_noticias_ajax"),
     url(r'^pedir_datos/$', 'sitio.views.pedir_datos'),
     url(r'^admin/', include(admin.site.urls)),
 ]

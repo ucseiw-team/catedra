@@ -1,4 +1,4 @@
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render
 from sitio.models import Noticia, Categoria
 from sitio.forms import FormNoticia
@@ -23,3 +23,15 @@ def pedir_datos(request):
     return render(request, 'pedir_datos.html', {'form_noticia': mi_form})
 
 
+def inicio_ajax(request):
+    return render(request, 'inicio_ajax.html', {})
+
+
+def lista_noticias_ajax(request):
+    noticias = Noticia.objects.all().order_by('fecha')
+    return render(request, 'lista_noticias.html', {'lista_noticias': noticias})
+
+
+def contador_noticias_ajax(request):
+    resultado = {"cantidad": Noticia.objects.all().count()}
+    return JsonResponse(resultado)
