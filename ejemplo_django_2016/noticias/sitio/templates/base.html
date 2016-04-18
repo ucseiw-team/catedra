@@ -1,8 +1,7 @@
+{% load staticfiles %}
 <html>
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    {% block extra_js %}
-    {% endblock %}
+    <script src="{% static 'js/jquery.min.js' %}"></script>
 </head>
 
 <body>
@@ -18,5 +17,13 @@
         <p>Gracias por visitarnos</p> 
         <p>Hecho en Django</p> 
     </div>
+
+    <script>
+        var url_contador_ajax = "{% url 'contador_noticias_ajax' %}";
+        var url_lista_ajax = "{% url 'lista_noticias_ajax' %}";
+    </script>
+    {% block extra_js %}
+    {% endblock %}
+
 </body>
 </html>
