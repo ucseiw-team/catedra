@@ -4,7 +4,7 @@ from sitio.models import Noticia, Categoria
 
 class AdminNoticia(admin.ModelAdmin):
     list_display = ('id', 'titulo', 'fecha',)
-    list_filter = ('archivada', 'fecha')
+    list_filter = ('archivada', 'fecha', 'categoria')
     search_fields = ('texto', )
     date_hierarchy = 'fecha'
 
