@@ -37,8 +37,17 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'haystack',
     'sitio',
 )
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        'PATH': os.path.join(BASE_DIR, 'whoosh_index'),
+    },
+}
+
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -102,3 +111,26 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_server_files')
+
+if os.environ.get('HEROKU', False):
+    # settings especificas para heroku
+    import dj_database_url
+    DATABASES['default'] = dj_database_url.config()
+    ALLOWED_HOSTS = ['*']
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+    from urlparse import urlparse
+
+    es = urlparse(os.environ.get('SEARCHBOX_URL') or 'http://127.0.0.1:9200/')
+    port = es.port or 80
+
+    HAYSTACK_CONNECTIONS = {
+        'default': {
+            'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+            'URL': es.scheme + '://' + es.hostname + ':' + str(port),
+            'INDEX_NAME': 'documents',
+        },
+    }
+
+    if es.username:
+        HAYSTACK_CONNECTIONS['default']['KWARGS'] = {"http_auth": es.username + ':' + es.password}

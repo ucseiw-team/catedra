@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^contador_noticias_ajax/$', 'sitio.views.contador_noticias_ajax', name="contador_noticias_ajax"),
     url(r'^pedir_datos/$', 'sitio.views.pedir_datos'),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^search/', include('haystack.urls')),
 ]
 
 
