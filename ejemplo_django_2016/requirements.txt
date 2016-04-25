@@ -1,0 +1,5 @@
+django==1.9
+django-toolbelt
+git+https://github.com/django-haystack/django-haystack
+whoosh
+elasticsearch
