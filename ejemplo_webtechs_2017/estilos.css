@@ -1,0 +1,22 @@
+h1 {
+    color: red;
+    text-align: right;
+}
+
+li.techsweb {
+    color: green;
+}
+
+#titulo-principal {
+    color: blue;
+}
+
+ul li p.saludo a,
+div {
+    background-color: rgb(150, 200, 200);
+    margin: 20px;
+}
+
+#lenguajes li {
+    color: purple;
+}
