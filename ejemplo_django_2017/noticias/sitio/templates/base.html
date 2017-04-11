@@ -1,0 +1,21 @@
+{% load static %}
+<html>
+<head>
+    <script src="{% static 'sitio/jquery.min.js' %}"></script>
+</head>
+<body>
+    <h1>Noticias.com {% block titulo %}{% endblock %}</h1>
+    <p>bienvenido!</p>
+
+    {% block contenido %}
+        <p>Contenido!</p>
+    {% endblock %}
+
+    <p>Hay una enorme cantidad de noticias!: <span id="cantidad-noticias">0</span></p>
+    <p>Y <span id="cantidad-noticias-archivadas">0</span> ya fueron archivadas.</p>
+
+    <script src="{% static 'sitio/base.js' %}" ></script>
+    {% block extra_js %}
+    {% endblock %}
+</body>
+</html>
