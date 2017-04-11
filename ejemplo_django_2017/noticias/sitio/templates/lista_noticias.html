@@ -1,0 +1,4 @@
+{% for noticia in lista_noticias %}
+    <h3>{{ noticia.fecha|date:"j F" }} - {{ noticia.titulo|upper }}</h3>
+    <p>{{ noticia.texto }}</p>
+{% endfor %}

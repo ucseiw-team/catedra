@@ -1,9 +1,16 @@
-<h1>Noticias.com</h1>
-<p>bienvenido!</p>
+{% extends 'base.html' %}
+{% load static %}
 
-{% for noticia in lista_noticias %}
-    <h3>{{ noticia.fecha }} {{ noticia.titulo }}</h3>
-    <p>{{ noticia.texto }}</p>
-{% endfor %}
+{% block titulo %} - inicio{% endblock %}
 
+{% block contenido %}
+    <div id="lista-noticias">
+        {% include 'lista_noticias.html' %}
+    </div>
 
+    <a href="#" id="actualizar-noticias">Actualizar</a>
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'sitio/inicio.js' %}" ></script>
+{% endblock %}
