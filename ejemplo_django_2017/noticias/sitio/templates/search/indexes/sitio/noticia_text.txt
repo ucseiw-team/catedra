@@ -1,0 +1,3 @@
+{{ object.titulo }}
+{{ object.categoria.nombre }}
+{{ object.descripcion }}

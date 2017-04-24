@@ -13,13 +13,14 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib import admin
 
 from sitio.views import inicio, login_fake, crear_noticia, lista_noticias_ajax, contador_noticias_ajax, acerca_de
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^search/', include('haystack.urls')),
     url(r'^inicio/$', inicio),
     url(r'^acerca_de/$', acerca_de),
     url(r'^login_fake/$', login_fake),

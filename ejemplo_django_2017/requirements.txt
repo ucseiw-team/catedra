@@ -1,3 +1,6 @@
 Django==1.10
 pytz
 django-toolbelt
+elasticsearch
+whoosh 
+git+https://github.com/django-haystack/django-haystack
