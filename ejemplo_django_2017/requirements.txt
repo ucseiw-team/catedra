@@ -7,3 +7,4 @@ git+https://github.com/django-haystack/django-haystack
 pydot
 pyparsing
 django-extensions
+django-haystack-elasticsearch5

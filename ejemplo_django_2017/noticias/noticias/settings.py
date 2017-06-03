@@ -146,7 +146,7 @@ if os.environ.get('HEROKU', False):
 
     HAYSTACK_CONNECTIONS = {
         'default': {
-            'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+            'ENGINE': 'haystack_elasticsearch5.Elasticsearch5SearchEngine',
             'URL': es.scheme + '://' + es.hostname + ':' + str(port),
             'INDEX_NAME': 'documents',
         },
