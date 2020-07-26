@@ -1,0 +1,8 @@
+<form action="." method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p>
+        <input type="submit" name="guardar" value="Guardar!" />
+        <input type="submit" name="guardar_editar" value="Guardar y seguir editando!" />
+    </p>
+</form>
