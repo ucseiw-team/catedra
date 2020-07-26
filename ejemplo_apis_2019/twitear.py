@@ -5,11 +5,11 @@ import tweepy
 
 
 # autenticación de oauth de la app
-CONSUMER_KEY = 'GuaSCSTGMQmwG2NsYFWRa9zOY'
-CONSUMER_SECRET = 'Fj3t3d7IdmD7eBBWoOyc4P5AfPfDjoEXqlKy8AlpUdBLalz3V3'
+CONSUMER_KEY = ''
+CONSUMER_SECRET = ''
 # autenticación de oauth del usuario (
-ACCESS_TOKEN = '44492903-uOksk9VTOgUUsWWcBC3pAGC8MtjDOSnVYs6PJPNvQ'
-ACCESS_TOKEN_SECRET = 'HeCCmI5a5fB7qb4HX6RYyUG3kT9CZ4zWUjC4MKHCiXgyz'
+ACCESS_TOKEN = ''
+ACCESS_TOKEN_SECRET = ''
 
 # cliente de la api
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
