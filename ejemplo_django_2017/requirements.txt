@@ -1,4 +1,4 @@
-Django==1.10
+Django==1.11.29
 pytz
 django-toolbelt
 elasticsearch
