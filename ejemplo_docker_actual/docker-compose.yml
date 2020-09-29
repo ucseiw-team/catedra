@@ -22,6 +22,3 @@ services:
 
   cache:
     image: "memcached:1.5.5"
-
-  processing_queue:
-    image: "rabbitmq:latest"
