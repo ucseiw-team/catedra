@@ -22,5 +22,5 @@ docker-compose up
 Y podemos hacer super magia: escalar los servicios a la cantidad que necesitemos! (con o sin `--no-start`)
 
 ```
-docker-compose up --scale web=50
+docker-compose up --no-start --scale web=50
 ```
