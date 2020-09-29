@@ -11,7 +11,6 @@ services:
     depends_on:
       - db
       - cache
-      - processing_queue
 
   db:
     image: "postgres:13.0"
