@@ -10,7 +10,7 @@ services:
       - /home/fisa/devel/ucse/seia/data_docker/:/myweb/data/
     depends_on:
       - db
-      - cache
+      - sessions
 
   db:
     image: "postgres:13.0"
