@@ -65,3 +65,11 @@ También podemos meternos con una consola a un contenedor que está andando, par
 ```
 docker exec -i -t web1 /bin/bash
 ```
+
+También podemos borrar la imagen, si no la vamos a usar más y queremos liberar espacio. Pero no nos va a dejar si hay contenedores creados (corriendo o no) que usen esa imagen.
+
+```
+docker stop web1 web2
+docker rm web1 web2
+docker rmi my_web  # finalmente podemos borrar la imagen
+```
