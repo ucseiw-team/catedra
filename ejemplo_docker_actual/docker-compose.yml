@@ -1,18 +1,18 @@
 version: "3"
 services:
   web:
-    ports:
-      - "5001-5999:5000"
     hostname: web
     build:
       context: .
+    ports:
+      - "5001-5999:5000"
     depends_on:
       - db
       - cache
       - processing_queue
 
   db:
-    image: "postgres"
+    image: "postgres:13.0"
     volumes:
       - /home/fisa/devel/ucse/seia/data_docker_db/:/var/lib/postgresql/data/
     environment:
@@ -24,4 +24,4 @@ services:
     image: "memcached:1.5.5"
 
   processing_queue:
-    image: rabbitmq:latest
+    image: "rabbitmq:latest"
