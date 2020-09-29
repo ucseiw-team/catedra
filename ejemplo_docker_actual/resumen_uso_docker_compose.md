@@ -7,10 +7,10 @@ pip install docker-compose
 Y luego, se usa casi igual a docker: tenemos comandos para crear todos los contenedores, levantar todo, detener todo, borrar todos los contenedores, etc:
 
 ```
-docker-compose up --no-start
+docker-compose up --no-start  # esto crea los contenedores si no existen
 docker-compose start
 docker-compose stop
-docker-compose down
+docker-compose down  # esto borra los contenedores
 ```
 
 Y también podemos correr el up y el start al mismo tiempo, y que se vean los logs en vivo en nuestra consola (lo detenemos con control-c y luego un down):
