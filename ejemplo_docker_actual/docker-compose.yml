@@ -1,12 +1,27 @@
-version: "2"
+version: "3"
 services:
-    web:
-      hostname: web
-      build:
-          context: .
-      depends_on:
-        - worker
+  web:
+    ports:
+      - "5001-5999:5000"
+    hostname: web
+    build:
+      context: .
+    depends_on:
+      - db
+      - cache
+      - processing_queue
 
-    worker:
-      build: 
-        context: ./worker/ 
+  db:
+    image: "postgres"
+    volumes:
+      - /home/fisa/devel/ucse/seia/data_docker_db/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=my_web
+      - POSTGRES_PASSWORD=paparulo
+      - POSTGRES_DB=my_web
+
+  cache:
+    image: "memcached:1.5.5"
+
+  processing_queue:
+    image: rabbitmq:latest
