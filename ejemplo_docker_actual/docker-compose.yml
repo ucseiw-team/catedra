@@ -21,7 +21,7 @@ services:
       - POSTGRES_PASSWORD=paparulo
       - POSTGRES_DB=my_web
 
-  cache:
+  sessions:
     image: "memcached:1.5.5"
 
   load_balancer:
