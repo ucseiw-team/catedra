@@ -13,7 +13,7 @@ docker run --rm -t -i my_web
 Pero necesitamos mapear puertos para poder usar la web: que nuestramaquina:5000 vaya a elcontenedor:5000 (con la sintaxis `-p puerto_de_nuestra_maquina:puerto_del_contenedor`)
 
 ```
-docker run --rm -t -i -p 5000:5000 my_web
+docker run --rm -t -i -p 5001:5000 my_web
 ```
 
 Crear un contenedor con la imagen pero que no se borre solo (para poder iniciarlo y detenerlo muchas veces), y luego iniciarlo:
