@@ -6,6 +6,8 @@ services:
       context: .
     ports:
       - "5001-5999:5000"
+    volumes:
+      - /home/fisa/devel/ucse/seia/data_docker/:/myweb/data/
     depends_on:
       - db
       - cache
