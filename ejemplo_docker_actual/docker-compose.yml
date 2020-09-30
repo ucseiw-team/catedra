@@ -31,4 +31,4 @@ services:
     depends_on:
       - web
     ports:
-      - "5000:5000"
+      - "5001:5000"
