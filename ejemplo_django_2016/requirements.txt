@@ -1,4 +1,4 @@
-django==1.9
+django==2.2.24
 django-toolbelt
 git+https://github.com/django-haystack/django-haystack
 whoosh
