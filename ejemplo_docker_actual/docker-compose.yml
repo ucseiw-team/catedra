@@ -2,8 +2,7 @@ version: "3"
 services:
   web:
     hostname: web
-    build:
-      context: .
+    image: "my_web"
     expose:
       - "5000"
     volumes:
