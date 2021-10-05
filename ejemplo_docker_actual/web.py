@@ -25,5 +25,8 @@ def save(thing):
 
 @app.route("/read/")
 def read():
-    things = things_path.read_text()
+    try:
+        things = things_path.read_text()
+    except:
+        things = "No things saved!"
     return f"<h1>Current things:</h1><pre>{things}</pre>"
