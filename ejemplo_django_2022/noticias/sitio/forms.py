@@ -14,3 +14,9 @@ class FormularioNoticia(forms.Form):
             raise ValidationError("Lenguaje desubicado")
 
         return data
+
+
+class FormularioModeloNoticia(forms.ModelForm):
+    class Meta:
+        model = Noticia
+        fields = ['titulo', 'fecha', 'texto']

@@ -2,7 +2,7 @@ from django.shortcuts import render, HttpResponseRedirect
 from sitio.models import Noticia
 from datetime import datetime
 
-from sitio.forms import FormularioNoticia
+from sitio.forms import FormularioNoticia, FormularioModeloNoticia
 
 
 
@@ -38,3 +38,16 @@ def ejemplo_form_django(request):
         form = FormularioNoticia()
 
     return render(request, "ejemplo_form_django.html", {"form": form})
+
+
+def ejemplo_model_form_django(request):
+    if request.method == "POST":
+        form = FormularioModeloNoticia(request.POST)
+
+        if form.is_valid():
+            form.save()  # esto crea y guarda la noticia!
+            return HttpResponseRedirect("/inicio/")
+    else:
+        form = FormularioModeloNoticia()
+
+    return render(request, "ejemplo_form_django.html", {"form": form})  # podemos seguir usando el mismo template que con el form normal :)
