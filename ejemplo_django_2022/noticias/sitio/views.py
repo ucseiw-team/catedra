@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponseRedirect
 from sitio.models import Noticia
 from datetime import datetime
+
+from sitio.forms import FormularioNoticia
 
 
 
@@ -13,11 +15,26 @@ def inicio(request):
 
     noticias = Noticia.objects.filter(archivada=False).order_by("fecha")
 
-    a = 1 / 0
-
     return render(
         request,
         'inicio.html',
         {'seccion': 'Policiales', 'lista_noticias': noticias},
     )
 
+
+def ejemplo_form_pelado(request):
+    print("los datos son:", request.POST)
+    return render(request, "ejemplo_form_pelado.html", {})
+
+
+def ejemplo_form_django(request):
+    if request.method == "POST":
+        form = FormularioNoticia(request.POST)
+
+        if form.is_valid():
+            print("los datos finales son:", form.cleaned_data)
+            return HttpResponseRedirect("/inicio/")
+    else:
+        form = FormularioNoticia()
+
+    return render(request, "ejemplo_form_django.html", {"form": form})

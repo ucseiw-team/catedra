@@ -1,0 +1,14 @@
+<body style="background: black; color: white">
+
+<h1>Ejemplo de form pelado</h1>
+
+<form action="." method="post">
+    {% csrf_token %}
+    <input type="text" name="titulo" />
+    <input type="date" name="fecha" />
+    <input type="checkbox" name="archivada" />
+
+    <input type="submit" value="Guardar" />
+</form>
+
+</body>
