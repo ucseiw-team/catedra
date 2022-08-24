@@ -1,6 +1,8 @@
 from django import forms
 from django.core.exceptions import ValidationError
 
+from sitio.models import Noticia
+
 
 class FormularioNoticia(forms.Form):
     titulo = forms.CharField(max_length=5)

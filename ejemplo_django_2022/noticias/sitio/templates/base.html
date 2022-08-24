@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Noticias.com</title>
+    <link rel="stylesheet" href="{% static 'sitio/css/estilos.css' %}" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <img src="{% static 'sitio/imgs/logo_web.png' %}" />
+    <h1 id="titulo-pagina">Noticias - {% block nombre_seccion%} ? {% endblock %}</h1>
+
+    <div class="contenido">
+        {% block contenido %}
+            <p>Contenido aqui</p>
+        {% endblock %}
+    </div>
+
+    <script src="logica.js"></script>
+</body>
+
+</html>
+
+
+
+
+

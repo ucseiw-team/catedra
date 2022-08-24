@@ -1,9 +1,17 @@
-<h1>noticias.com</h1>
-<p>bienvenido! Sección {{ seccion }}</p>
+{% extends "base.html" %}
+
+{% block nombre_seccion %}Home{% endblock %}
+
+{% block contenido %}
+
+<p>Estas son las noticias actuales:</p>
+
+{% include "publicidad.html" with seccion="home" %}
 
 {% for noticia in lista_noticias %}
-    <h3>{{ noticia.fecha }} {{ noticia.titulo }}</h3>
+    <h3>{{ noticia.fecha }} {{ noticia.titulo|capfirst }}</h3>
     <p>{{ noticia.texto }}</p>
 {% endfor %}
 
+{% endblock %}
 

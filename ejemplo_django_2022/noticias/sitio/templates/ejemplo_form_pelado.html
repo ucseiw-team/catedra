@@ -1,6 +1,8 @@
-<body style="background: black; color: white">
+{% extends "base.html" %}
 
-<h1>Ejemplo de form pelado</h1>
+{% block nombre_seccion %}Ejemplo form pelado{% endblock %}
+
+{% block contenido %}
 
 <form action="." method="post">
     {% csrf_token %}
@@ -11,4 +13,6 @@
     <input type="submit" value="Guardar" />
 </form>
 
-</body>
+{% include "publicidad.html" with seccion="form" %}
+
+{% endblock %}

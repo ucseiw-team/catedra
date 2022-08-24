@@ -18,7 +18,7 @@ def inicio(request):
     return render(
         request,
         'inicio.html',
-        {'seccion': 'Policiales', 'lista_noticias': noticias},
+        {'lista_noticias': noticias},
     )
 
 
@@ -41,13 +41,12 @@ def ejemplo_form_django(request):
 
 
 def ejemplo_model_form_django(request):
-    if request.method == "POST":
-        form = FormularioModeloNoticia(request.POST)
+    if request.method == "POST":
+        form = FormularioModeloNoticia(request.POST)
+        if form.is_valid():
+            form.save()  # esto crea y guarda la noticia!
+            return HttpResponseRedirect("/inicio/")
+    else:
+        form = FormularioModeloNoticia()
 
-        if form.is_valid():
-            form.save()  # esto crea y guarda la noticia!
-            return HttpResponseRedirect("/inicio/")
-    else:
-        form = FormularioModeloNoticia()
-
-    return render(request, "ejemplo_form_django.html", {"form": form})  # podemos seguir usando el mismo template que con el form normal :)
+    return render(request, "ejemplo_form_django.html", {"form": form})  # podemos seguir usando el mismo template que con el form normal :)
