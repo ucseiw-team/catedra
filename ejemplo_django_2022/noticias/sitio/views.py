@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponseRedirect
+from django.http import JsonResponse
 from sitio.models import Noticia
 from datetime import datetime
 
@@ -20,6 +21,16 @@ def inicio(request):
         'inicio.html',
         {'lista_noticias': noticias},
     )
+
+
+def contador_noticias_json(request):
+    cantidad = Noticia.objects.count()
+    return JsonResponse({"cantidad_noticias": cantidad})
+
+
+def contador_noticias_html(request):
+    cantidad = Noticia.objects.count()
+    return render(request, "contador_noticias.html", {"cantidad_noticias": cantidad})
 
 
 def ejemplo_form_pelado(request):

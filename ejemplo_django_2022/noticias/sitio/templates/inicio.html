@@ -1,10 +1,13 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block nombre_seccion %}Home{% endblock %}
 
 {% block contenido %}
 
 <p>Estas son las noticias actuales:</p>
+<div id="contador-noticias-json"><p>(no se cuantas noticias)</p></div>
+<div id="contador-noticias-html"><p>(no se cuantas noticias)</p></div>
 
 {% include "publicidad.html" with seccion="home" %}
 
@@ -12,6 +15,8 @@
     <h3>{{ noticia.fecha }} {{ noticia.titulo|capfirst }}</h3>
     <p>{{ noticia.texto }}</p>
 {% endfor %}
+
+<script src="{% static 'sitio/js/inicio.js' %}"
 
 {% endblock %}
 

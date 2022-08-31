@@ -21,6 +21,8 @@ from sitio import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('inicio/', views.inicio),
+    path('api/contador_noticias_html/', views.contador_noticias_html),
+    path('api/contador_noticias_json/', views.contador_noticias_json),
     path('ejemplo_form_pelado/', views.ejemplo_form_pelado),
     path('ejemplo_form_django/', views.ejemplo_form_django),
     path('ejemplo_model_form_django/', views.ejemplo_model_form_django),
