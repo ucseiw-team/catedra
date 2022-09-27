@@ -13,6 +13,12 @@ docker-compose stop
 docker-compose down  # esto borra los contenedores
 ```
 
+Podemos consultar las cosas que tenemos corriendo referidas a nuestro proyecto con:
+
+```
+docker-compose ps
+```
+
 Y también podemos correr el up y el start al mismo tiempo, y que se vean los logs en vivo en nuestra consola (lo detenemos con control-c y luego un down):
 
 ```
