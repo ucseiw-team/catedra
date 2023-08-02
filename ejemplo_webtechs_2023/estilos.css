@@ -1,0 +1,15 @@
+body {
+    background-color: rgb(0, 127, 40);
+}
+
+div.noticia {
+    background-color: yellow;
+}
+
+div.noticia h1, div#piedepagina {
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 25px;
+}
