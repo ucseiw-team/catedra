@@ -9,5 +9,4 @@ RUN pip install -r requirements.txt
 COPY web.py /myweb/
 RUN mkdir /myweb/data
 
-ENV FLASK_APP web.py
-CMD ["flask", "run", "--host=0.0.0.0"]
+CMD ["python3", "web.py"]

@@ -30,3 +30,6 @@ def read():
     except:
         things = "No things saved!"
     return f"<h1>Current things:</h1><pre>{things}</pre>"
+
+
+app.run(host="0.0.0.0")
