@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sitio de prueba</title>
+    <script
+          src="https://code.jquery.com/jquery-3.7.1.js"
+          integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+          crossorigin="anonymous"></script>
+    <style>
+        #titulo-principal {
+            color: green;
+            font-size: 20px;
+        }
+        #bienvenida {
+            background-color: black;
+            color: white;
+        }
+        div.noticia {
+            background-color: gray;
+        }
+        div.noticia:hover {
+            background-color: green;
+        }
+        div.noticia h1 {
+            color: red;
+        }
+        #titulo-principal, div.noticia h1 {
+            font-family: arial;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo-principal">Ejemplo.com</h1>
+    <p id="bienvenida">Bienvenido!!</p>
+
+    <div class="noticia">
+        <h1>No se</h1>
+        <p>Listo.</p>
+    </div>
+    <div class="noticia">
+        <h1>Ahora sí</h1>
+        <p>Dale dale.</p>
+    </div>
+    <div class="noticia">
+        <h1>Aguante Miley</h1>
+        <p>Afuera Taylor (aguante Fayol)</p>
+    </div>
+
+    <ul>
+        <li><a href="http://google.com">Ir a google</a></li>
+        <li><a href="/noticias">Ir a ejemplo.com/noticias</a></li>
+    </ul>
+    <p>
+        <img src="/home/fisa/devel/ucse/seia/catedra/ejemplo_webtechs_2024/medieval.jpg"></img>
+    </p>
+
+    <script>
+        function cambiar_bienvenida() {
+            $("#bienvenida").text("te cambié");
+        }
+
+        $("#titulo-principal").on("click", cambiar_bienvenida);
+    </script>
+</body>
+</html>
