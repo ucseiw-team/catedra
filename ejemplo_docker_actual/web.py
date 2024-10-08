@@ -1,11 +1,12 @@
-from random import randint
+from hrid import HRID
 from pathlib import Path
 
 from flask import Flask
 
 
 app = Flask(__name__)
-server_id = randint(0, 1000000)
+id_generator = HRID('-', ('adjective', 'noun'))
+server_id = id_generator.generate()
 
 things_path = Path('./data/things.txt')
 
