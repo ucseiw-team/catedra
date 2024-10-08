@@ -26,7 +26,7 @@ def save(thing):
     with things_path.open('a') as things_file:
         things_file.write(f"saved {thing} from server {server_id}\n")
 
-    return f"<h1>Saved: {thing}</h1><h3>Server {server_id}</h3>"
+    return f"<h1>Saved: {thing}</h1><h3>Server {server_id}</h3><a href='/'>Back</a>"
 
 
 app.run(host="0.0.0.0")
